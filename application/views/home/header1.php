@@ -30,10 +30,10 @@
     <link href="<?php echo base_url('assets/plugins/bootstrap/css/bootsnav.css') ?> " rel="stylesheet">
 	
 	<!-- Nice Select Option css -->
-	<link rel="stylesheet" href="<?php echo base_url(' assets/plugins/nice-select/css/nice-select.css') ?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/nice-select/css/nice-select.css') ?>">
 	
 	<!-- Aos Css -->
-    <link href="<?php echo base_url(' assets/plugins/aos-master/aos.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/plugins/aos-master/aos.css') ?>" rel="stylesheet">
 
 	<!-- Slick Slider -->
     <link href="<?php echo base_url('assets/plugins/slick-slider/slick.css') ?> " rel="stylesheet">	
@@ -57,7 +57,7 @@
 	
 	<body>
 		<!-- ======================= Start Navigation ===================== -->
-		<nav class="navbar navbar-default navbar-mobile navbar-fixed white no-background bootsnav">
+		<nav class="navbar navbar-default navbar-mobile navbar-fixed light bootsnav">
 			<div class="container">
 			
 				<!-- Start Logo Header Navigation -->
@@ -65,8 +65,7 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 						<i class="fa fa-bars"></i>
 					</button>
-					<a class="navbar-brand" href="index.html">
-						<img src="<?php echo base_url('assets/img/hivee_light.png')?>" class="logo logo-display" alt="">
+					<a class="navbar-brand" href="#">
 						<img src="<?php echo base_url('assets/img/hivee.png') ?>" class="logo logo-scrolled" alt="">
 					</a>
 
@@ -83,7 +82,7 @@
 						</li>
 					
 						<li class="dropdown">
-							<a href="<?php echo site_url('') ?>" >For Company</a>
+							<a href="<?php echo site_url('home') ?>" >For Company</a>
 						</li>
 						
 						<li class="dropdown">
@@ -103,8 +102,7 @@
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li class="br-right"><a href="<?php echo base_url('login/loginperusahaan')?>"  data-toggle="modal" ><i class="login-icon ti-user"></i>Login</a></li>
-						<li class="sign-up"><a href="<?php echo site_url('daftar/register_perusahaan')?>" class="btn-signup red-btn" href="signup.html"><span class="ti-briefcase"></span>Create Account</a></li> 
+						<li class="br-right"><a href="javascript:void(0)"  data-toggle="modal" data-target="#signin"><i class="login-icon ti-user"></i>Login</a></li>
 					</ul>
 						
 				</div>
@@ -117,7 +115,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content" id="myModalLabel1">
 					<div class="modal-body">
-						<div class="text-center"><img src="<?php echo base_url('assets/img/hivee.png') ?>" alt="" class="gambar img-responsive"></div>
+						<div class="text-center"><img src=" <?php echo base_url('assets/img/hivee.png') ?>" alt="" class="gambar img-responsive "></div>
 						
 						<!-- Nav tabs -->
 							
@@ -150,9 +148,7 @@
 									</div>
 									
 								</form>
-								
-								<div class="log-option"><span>OR</span></div>
-								
+								<div class="log-option"><span>OR</span></div>								
 								<div class="row mrg-bot-20">
 									<div class="col-md-6">
 										<a href="index.html#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>
@@ -161,9 +157,9 @@
 										<a href="index.html#" title="" class="gplus-log-btn log-btn"><i class="fa fa-google-plus"></i>Sign In With Google+</a>
 									</div>
 								</div>
-							<div class="row">
+								<div class="row">
 									<div class="col-md-12 text-center">
-										<p style=''>Don't have an account? <a href="<?php echo base_url('home/register_perusahaan') ?>"><b>Create Account</b></a></p>
+										<p style=''>Don't have an account? <a href=""><b>Create Account</b></a></p>
 									</div>
 								</div>
 							</div>
