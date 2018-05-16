@@ -1,0 +1,154 @@
+/*-------------- General Color ----------------*/
+p a {
+    color: #ff7c39;
+}
+.theme-cl {
+    color: #ff7c39;
+}
+.theme-btn {
+    background: #ff7c39;
+    border: 1px solid #ff7c39;
+	color:#ffffff;
+}
+.theme-btn:hover, .theme-btn:focus{
+	color:#ffffff;
+	background: #ff7c39;
+    border: 1px solid #ff7c39;
+}
+.btn.theme-btn-outlined, a.theme-btn-outlined{
+	border:1px solid #ff7c39;
+	color:#ff7c39;	
+}
+.btn.theme-btn-outlined:hover, a.theme-btn-outlined:hover, .btn.theme-btn-outlined:focus, a.theme-btn-outlined:focus{
+	background:#ff7c39;
+	border-color:#ff7c39;
+}
+.btn.light-btn, a.light-btn{
+	background:#ffffff;
+	border:1px solid #ffffff;
+	color:#ff7c39;
+}
+.btn.light-btn:hover, .btn.light-btn:focus, a.light-btn:hover, a.light-btn:focus{
+	background:#ff7c39;
+	border:1px solid #ff7c39;
+	color:#ffffff;
+}
+nav.navbar.bootsnav ul.nav > li >a.btn-signup.red-btn {
+    background:#ff7c39 !important;
+}
+.cmp-overview .cmp-icon i.fa {
+    background: #ff7c39;
+}
+.category-box .category-desc i {
+    color: #ff7c39;
+}
+.nav-tabs.nav-advance>li.active>a, .nav-tabs.nav-advance>li>a:hover, .nav-tabs.nav-advance>li>a:focus {
+    color: #ff7c39 !important;
+}
+.slick-next:before, .slick-prev:before {
+    color: #ff7c39;
+}
+
+/*---------- Banner ----------*/
+.main-banner:before {
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: #1491de;
+   /* background: -webkit-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);
+    background: -moz-linear-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);
+    background: -ms-linear-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);
+    background: -o-linear-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);
+    background: linear-gradient(left, rgba(20,145,222,1) 0%,rgba(185,57,208,1) 100%);*/
+    opacity: 0.8;
+}
+
+
+/*----------- Checkbox & Radio Button -------------*/
+.custom-checkbox input[type="checkbox"]:checked + label:before {
+	border-color:#ff7c39;
+	background:#ff7c39;
+}
+.custom-radio [type="radio"]:checked + label:after,
+.custom-radio [type="radio"]:not(:checked) + label:after {
+    background:#ff7c39;
+}
+
+/*---------- Pagination --------------*/
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus, .pagination>li>a:hover, .pagination>li>a:focus {
+	color:#ff7c39;
+	border-color:#ff7c39;
+}
+.pagination li:first-child a {
+	background: #ff7c39;
+	border: 1px solid #ff7c39;
+}
+
+/*------ Package --------*/
+.active .package-header {
+    background: #ff7c39;
+}
+button.btn.btn-package {
+    background: #ff7c39;
+}
+
+/*--------- Testimonial ----------*/
+.testimonial-detail .client-rating i {
+    color: #ff7c39;
+}
+
+/*------ Accordion Color -------------*/
+.style-1#accordion .panel-title a:after,
+.style-1#accordion .panel-title a.collapsed:after{
+    color:#ff7c39;
+}
+
+#accordion2 .panel-title a:after,
+#accordion2 .panel-title a.collapsed:after{
+    color:#ff7c39;
+}
+
+#accordion2.panel-group.style-2 .panel-title a.collapsed {
+    background: #ff7c39;
+}
+
+/*------ Tab Color -------------*/
+.tab.style-1 .nav-tabs li a:hover,
+.tab.style-1 .nav-tabs li.active a{
+    color: #ff7c39;
+    border-bottom: 2px solid #ff7c39;
+}
+
+.tab.style-2 .nav-tabs li a:hover, .tab.style-2 .nav-tabs li.active a {
+    border-bottom: 2px solid #ff7c39;
+    background: #ff7c39;
+}
+
+/*---- Footer -------*/
+.footer h4 {
+    color: #ff7c39;
+}
+.footer .f-social-box ul li a i:hover, .footer .f-social-box ul li a i:focus {
+    background: #ff7c39;
+    border-color: #ff7c39;
+}
+
+
+/*--------- Inner Pages ----------------*/
+ul.side-list-inline.social-side li a :hover, ul.side-list-inline.social-side li a :focus {
+    background:#ff7c39;
+}
+.detail-info > h3 {
+    color: #ff7c39;
+}
+span.pull-right.vacancy-no span.v-count {
+    background: rgba(255, 124, 57,0.1);
+    color: #ff7c39;
+    border: 1px solid #ff7c39;
+}
+
