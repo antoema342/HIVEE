@@ -14,3 +14,26 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+.detail{
+    border-style: solid;
+    border-color: white;
+}
+.testiback {
+    color: white !important;
+}
+.search{
+    margin-top: 40px;
+}
+.pg {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#bulan{
+ width:150px;   
+}
+
+#bulan option{
+ width:100px;   
+}
+/* Style the active class (and buttons on mouse-over) */

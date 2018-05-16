@@ -48,7 +48,6 @@ nav.navbar.bootsnav ul.nav > li >a.btn-signup.red-btn {
 .slick-next:before, .slick-prev:before {
     color: #ff7c39;
 }
-
 /*---------- Banner ----------*/
 .main-banner:before {
     content: "";
