@@ -52,6 +52,7 @@
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+    
 	</head>
 	
 	<body>
@@ -101,8 +102,8 @@
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right">
-						<li class="br-right"><a href="<?php echo base_url('login/loginkandidat') ?>"  data-toggle="modal" ><i class="login-icon ti-user"></i>Login</a></li>
-						<li class="sign-up"><a class="btn-signup red-btn" href="<?php echo base_url('daftar/register_kandidat') ?>"><span class="ti-briefcase"></span>Create Account</a></li> 
+						<li class="br-right"><a href="javascript:void(0)"  data-toggle="modal" data-target="#signin"><i class="login-icon ti-user"></i>Login</a></li>
+						<li class="sign-up"><a class="btn-signup red-btn" href="<?php echo base_url('register/register_kandidat') ?>"><span class="ti-briefcase"></span>Create Account</a></li> 
 					</ul>
 						
 				</div>
@@ -124,16 +125,16 @@
 						
 							<!-- Employer Panel 1-->
 							<div class="tab-pane fade in show active" id="employer" role="tabpanel">
-								<form action="<?php echo base_url('Login/ceklogin')?>" method="POST">
+								<form>
 									
 									<div class="form-group">
 										<label>User Name</label>
-										<input type="text" class="form-control" placeholder="User Name" name="usname">
+										<input type="text" class="form-control" placeholder="User Name">
 									</div>
 									
 									<div class="form-group">
 										<label>Password</label>
-										<input type="password" class="form-control" placeholder="*********" name="pass">
+										<input type="password" class="form-control" placeholder="*********">
 									</div>
 									
 									<div class="form-group">
@@ -144,7 +145,7 @@
 										<a href="index.html#" title="Forget" class="fl-right">Forgot Password?</a>
 									</div>
 									<div class="form-group text-center">
-										<button type="submit" class="btn theme-btn full-width btn-m">LogIn </button>
+										<button type="button" class="btn theme-btn full-width btn-m">LogIn </button>
 									</div>
 									
 								</form>

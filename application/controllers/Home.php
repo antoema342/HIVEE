@@ -8,19 +8,16 @@
 	{
 		public function index ()
 		{
-			$data['kandidat'] = $this->Daftaruser_model->JumlahKandidat();
-			$data['perusahaan'] = $this->Daftaruser_model->JumlahPerusahaan();
-			//$data['lowongan']  = $this->Daftaruser_model->JumlahLowongan();
-			$this->load->view('home_pt/header');
-			$this->load->view('home_pt/content_pt',$data);
-			$this->load->view('home_pt/footer');
+			$this->load->view('home/header');
+			$this->load->view('home/home_pt/content_pt');
+			$this->load->view('home/footer');
 		}
+
 		public function home_kandidat ()
 		{
-			
-			$this->load->view('home_kandidat/header');
-			$this->load->view('home_kandidat/content');
-			$this->load->view('home_kandidat/footer');
+			$this->load->view('home/home_kandidat/header');
+			$this->load->view('home/home_kandidat/content');
+			$this->load->view('home/footer');
 
 		}
 	}

@@ -1,5 +1,5 @@
 <!-- ======================= Start Freelancer Banner ===================== -->
-		<section class="freelancer banner " style="background:url('<?php echo base_url('assets/img/employer1.jpg')?>');">
+		<section class="  candidate-box freelancer banner " style="background:url('<?php echo base_url('assets/img/employer1.jpg')?>');">
 			<div class="container">
 				<div class="col-md-7 col-sm-7">				
 					<div class="caption">
@@ -77,7 +77,7 @@
 				
 			</div>
 		</section>	
-		<section class="tag-sec" style="background:url('<?php echo base_url('assets/img/slider-3.jpg') ?>');">
+		<section class="tag-sec" style="background:url('<?php echo base_url('assets/img/slider-01.jpg') ?>');">
 			<div class="container">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="tag-content">
@@ -259,9 +259,113 @@
 									</div>									
 								</div>
 							</div>
+							<div class="col-md-12 text-center">	
+							<a href="<?php 	echo site_url('kandidat/search') ?>" type="button" class="btn theme-btn btn-radius btn-m btn-block">MORE JOBS!</a>
+							</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<section class="tag-sec" style="background:url('<?php echo base_url('assets/img/banner.jpg') ?>');" >
+			<div class="container testiback">
 
+				<div class="row" data-aos="fade-up">
+					<div class="col-md-12">
+						<div class="heading">
+							<h2 style="color:white">Testimonial</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="carousel slide" data-ride='carousel' id="myCarousel">
+						 <!-- Indicators -->
+	    				<ol class="carousel-indicators">
+	      					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	      					<li data-target="#myCarousel" data-slide-to="1"></li>
+	      					<li data-target="#myCarousel" data-slide-to="2"></li>
+	    				</ol>
+
+	    				<div class="carousel-inner">
+
+	    				<div class="item active">
+	    				<div class="col-md-5 testimonial-detail detail">
+							<div class="pic">
+								<img src="<?php echo base_url('assets/img/ucup.png') ?>" alt="" class="avatar avatar-xl">
+							</div>
+							<h3 class="user-testimonial-title testiback">Yusuf Farhan</h3>
+							<h5 style="color: white">Penggiat Olahraga Extream</h5>
+							<br>	
+							<p class="user-description">
+								Sebelum nya saya tidak bisa jajan di kafe mahal apalagi membeli iphone , tetapi setelah bergabung dengan HIVEE sekarang saya bisa nongkrong di kafe mahal dan membeli iphone, lihat foto saya mewah kan. Terimakasih HIVEE!
+							</p>
+							<div class="client-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>	
+						</div>
+						<div class="col-md-5 testimonial-detail detail">
+							<div class="pic">
+								<img src="assets/img/client-1.jpg" alt="" class="avatar avatar-xl">
+							</div>
+							<h3 class="user-testimonial-title testiback">Dian</h3>
+							<p class="user-description">
+								Tegar ganteng
+							</p>
+							<div class="client-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>
+						</div>
+						</div>
+
+						<div class="item">
+		    				<div class="item active">
+	    				<div class="col-md-5 testimonial-detail detail">
+							<div class="pic">
+								<img src="assets/img/client-1.jpg" alt="" class="avatar avatar-xl">
+							</div>
+							<h3 class="user-testimonial-title testiback">Sagarasasdsh</h3>
+							<p class="user-description">
+								At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.
+							</p>
+							<div class="client-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>	
+						</div>
+						<div class="col-md-5 testimonial-detail detail">
+							<div class="pic">
+								<img src="assets/img/client-1.jpg" alt="" class="avatar avatar-xl">
+							</div>
+							<h3 class="user-testimonial-title testiback">Dasas</h3>
+							<p class="user-description">
+								Tegar ganteng
+							</p>
+							<div class="client-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+							</div>
+						</div>
+						</div>
+
+						</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
 		

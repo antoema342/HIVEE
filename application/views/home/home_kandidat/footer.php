@@ -98,7 +98,7 @@
 		<script src="<?php echo base_url('assets/plugins/nice-select/js/jquery.nice-select.min.js') ?> "></script>
 		
 		<!-- Custom Js -->
-		<script src="<?php echo base_url(' assets/js/custom.js') ?>"></script>
+		<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
 		
 		<script>
 			AOS.init();

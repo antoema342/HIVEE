@@ -19,7 +19,7 @@
 									<i class="fa fa-check"></i>
 								</div>
 								<div class="cmp-detail">							
-									<h3><?=$kandidat?></h3>
+									<h3>674.058</h3>
 									<span>Pekerja Aktif</span>
 								</div>
 							</div>
@@ -32,7 +32,7 @@
 									<i class="fa fa-check"></i>
 								</div>
 								<div class="cmp-detail">							
-									<h3><?=$perusahaan?></h3>
+									<h3>74.587</h3>
 									<span>Perusahaan</span>
 								</div>
 							</div>
@@ -194,7 +194,7 @@ Setiap bulan, lebih dari 7 juta Pelamar beralih ke situs web dalam mencari peker
 								</div>
 
 								<div class="category-detail category-desc-text">
-									<a href="browse-job.html" title=""><h4>Less Private</h4></a>
+									<a href="browse-job.html" title=""><h4>Design</h4></a>
 									<p>80 Jobs</p>
 								</div>
 							</div>
