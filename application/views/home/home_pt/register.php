@@ -9,36 +9,60 @@
 						<h2>Create Company Account</h2>
 					</div>
 					<div class="log-box">
-						<form class="log-form">
+				<div class="row">
+				        <div class="col-md-12">
+				          <?php if ($this->session->flashdata('usersalah')): ?>
+				            <div class="alert alert-danger alert-dismissible">
+				              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				              <h4><i class="icon fa fa-check"></i>Info</h4>
+				              Username Yang Anda Masukan Sudah Terpakai !!
+				            </div>
+				       	  <?php elseif($this->session->flashdata('emailsalah')): ?>
+				            <div class="alert alert-danger alert-dismissible">
+				              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				              <h4><i class="icon fa fa-close"></i>Informasi</h4>
+				              Email Anda Sudah Terdaftar !!
+				           </div>  
+				          <?php endif ?>
+				        </div>
+				      </div>
+				  </div>
+					<div class="log-box">
+						<form class="log-form" action="<?php echo base_url('Register/DaftarPerusahaan');?>" method="POST">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
 										<label>Company Name</label>
-										<input type="text" class="form-control" placeholder="Your Name" required>
+										<span class="text-danger"><?=form_error('comname')?></span>
+										<input type="text" class="form-control" placeholder="Your Name" name="comname">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<label>Addres</label>
-										<input type="email" class="form-control" placeholder="Company Addres" required>
+										<span class="text-danger"><?=form_error('alamat')?></span>
+										<input type="text" class="form-control" placeholder="Company Addres" name="alamat">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<label>Email</label>
-										<input type="email" class="form-control" placeholder="Your Email.." required>
+										<span class="text-danger"><?=form_error('emailpt')?></span>
+										<input type="email" class="form-control" placeholder="Your Email.." name="emailpt">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<label>Phone Number</label>
-										<input type="number" class="form-control" placeholder="Telp" required>
+										<span class="text-danger"><?=form_error('tlppt')?></span>
+										<input type="number" class="form-control" placeholder="Telp" name="tlppt">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
 										<label>Username</label>
-										<input type="text" class="form-control" placeholder="Username" required>
+										<span class="text-danger"><?=form_error('userpt')?></span>
+										<input type="text" class="form-control" placeholder="Username" name="userpt">
 									</div>
 								</div>
 							</div>							
@@ -46,13 +70,15 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Password</label>
-										<input type="password" class="form-control" placeholder="********">
+										<span class="text-danger"><?=form_error('passpt')?></span>
+										<input type="password" class="form-control" placeholder="********" name="passpt">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Confirm Password</label>
-										<input type="password" class="form-control" placeholder="********">
+										<span class="text-danger"><?=form_error('repasspt')?></span>
+										<input type="password" class="form-control" placeholder="********" name="repasspt">
 									</div>
 								</div>
 							</div>

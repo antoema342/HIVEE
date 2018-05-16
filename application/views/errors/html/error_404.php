@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<h1 class="mrg-top-15 mrg-bot-0 cl-danger font-250 font-bold">404</h1>
 						<h2 class="mrg-top-10 mrg-bot-5 funky-font font-60">You Missed</h2>
 						<p>The page you are looking for doesn't exist </p>
-						<a href="" class="btn theme-btn-trans mrg-top-20">Go To Home Page</a>
+						<a href="Home" class="btn theme-btn-trans mrg-top-20">Go To Home Page</a>
 					</div>
 				</div>
 			</section>

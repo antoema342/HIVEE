@@ -21,7 +21,7 @@
 			<div class="emp-detail">
 				<ul>
 					<li><span class="cl-primary">12</span> Lamaran</li>
-					<li><span class="cl-succes">4</span> Diterima</li>
+					<li><span class="cl-success">4</span> Diterima</li>
 					<li><span class="cl-danger">8</span> Ditolak</li>
 				</ul>
 			</div>
@@ -57,7 +57,7 @@
 										<td>
 										<a href="">
 										<img src="<?php echo base_url('assets/img/c-3.png') ?>" class="avatar-lg" alt="Avatar">Design Logo
-										<span class="mng-jb">PT.Tira Ind</span>
+										<span class="mng-jb">PT.Tana Toraja</span>
 										</a>
 										</td>
 										<td>Mall Casablanca, Kuningan</td>
