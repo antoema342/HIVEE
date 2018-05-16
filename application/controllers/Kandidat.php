@@ -39,5 +39,12 @@ class Kandidat extends CI_Controller
 		$this->load->view('home/footer');
 	}
 
+	public function change()
+	{
+		$this->load->view('kandidat/header');
+		$this->load->view('kandidat/changepassword');
+		$this->load->view('home/footer');
+	}
+
 }
 ?>

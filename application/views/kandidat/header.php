@@ -97,7 +97,7 @@
 							</a>
 							<ul class="dropdown-menu animated fadeOutUp">
 								<li><a href="<?php echo site_url ('kandidat/profile') ?>">Edit profile</a></li>
-								<li><a href="#">Change Password</a></li>
+								<li><a href="<?php echo site_url('kandidat/change') ?>">Change Password</a></li>
 							</ul>
 						</li> 
 						<li class="br-right"><a href=""><i class="login-icon ti-power-off"></i>Logout</a></li>

@@ -286,7 +286,7 @@
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group text-center mrg-top-15">
-										<button type="submit" class="btn theme-btn btn-m">Update Profile</button>
+										<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
 									</div>
 								</div>
 							</div>
@@ -359,7 +359,7 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group text-center mrg-top-15">
-													<button type="submit" class="btn theme-btn btn-m">SAVE</button>
+													<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
 												</div>
 											</div>
 										</div>
@@ -526,6 +526,14 @@
 									</div>
 								</div>
 
+								<div class="row">
+								<div class="col-md-12">
+									<div class="form-group text-center mrg-top-15">
+										<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
+									</div>
+								</div>
+							</div>
+
 							</form>
 						</div>
 					</div>
@@ -580,7 +588,7 @@
 									<div class="row">
 											<div class="col-md-12">
 												<div class="form-group text-center mrg-top-15">
-													<button type="submit" class="btn theme-btn btn-m">SAVE</button>
+													<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
 												</div>
 											</div>
 										</div>
