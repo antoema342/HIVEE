@@ -100,7 +100,7 @@
 								<li><a href="<?php echo site_url('kandidat/change') ?>">Change Password</a></li>
 							</ul>
 						</li> 
-						<li class="br-right"><a href=""><i class="login-icon ti-power-off"></i>Logout</a></li>
+						<li class="br-right"><a href="<?php echo base_url('login?logout=signout');?>"><i class="login-icon ti-power-off"></i>Logout</a></li>
 					</ul>
 						
 				</div>
