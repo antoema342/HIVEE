@@ -41,11 +41,11 @@
                   </td>
                   <td class="text-center">
 
-                    <button class="btn btn-primary" data-href="" data-toggle="modal" data-target="#confirm" > 
+                    <a class="btn btn-primary" href="<?=site_url("admin/nonaktifkanlowongan/$a->id_lowongan")?>" > 
                     Disable
-                    </button>
+                    </a>
                     
-                    <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
+                    <a href="<?php echo site_url("admin/nonaktifkanlowongan/$a->id_lowongan") ?>" class="btn btn-danger">Delete</a>
                   </td>
                 </tr>
                 <?php
@@ -65,4 +65,3 @@
         <!-- partial:partials/_footer.html -->
         </div>
       </div>
-

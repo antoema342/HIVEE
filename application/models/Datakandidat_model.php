@@ -23,4 +23,22 @@ class Datakandidat_model extends CI_Model {
 
 			return $query->result();
 	}
+	public function aktifkankandidat($id_kandidat){
+	$data = array (
+			'status'   => 'Aktif',
+		);
+
+		$this->db->where('id_kandidat',$id_kandidat);
+		$this->db->limit(1);
+		return $this->db->update('kandidat',$data);
+	}
+	public function nonaktifkankandidat($id_kandidat){
+	$data = array (
+			'status'   => 'NonAktif',
+		);
+
+		$this->db->where('id_kandidat',$id_kandidat);
+		$this->db->limit(1);
+		return $this->db->update('kandidat',$data);
+	}
 }

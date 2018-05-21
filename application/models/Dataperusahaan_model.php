@@ -23,4 +23,22 @@ class Dataperusahaan_model extends CI_Model {
 
 			return $query->result();
 	}
+	public function aktifkanperusahaan($id_perusahaan){
+	$data = array (
+			'status'   => 'Aktif',
+		);
+
+		$this->db->where('id_perusahaan',$id_perusahaan);
+		$this->db->limit(1);
+		return $this->db->update('perusahaan',$data);
+	}
+	public function nonaktifkanperusahaan($id_perusahaan){
+	$data = array (
+			'status'   => 'NonAktif',
+		);
+
+		$this->db->where('id_perusahaan',$id_perusahaan);
+		$this->db->limit(1);
+		return $this->db->update('perusahaan',$data);
+	}
 }

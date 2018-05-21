@@ -45,9 +45,9 @@
                   </td>
                   <td class="text-center">
 
-                    <button class="btn btn-primary" data-href="" data-toggle="modal" data-target="#confirm" > 
+                    <a class="btn btn-primary" href="<?=site_url("admin/nonaktifkankandidat/$a->id_kandidat")?>" > 
                     Disable
-                    </button>
+                    </a>
                     
                     <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
                   </td>

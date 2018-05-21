@@ -63,4 +63,40 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/lowongannonaktif',$data);
 		$this->load->view('admin/footer');
 	}
+	public function aktifkankandidat($id_kandidat){
+			$hidupkakandidat	= $this->Datakandidat_model->aktifkankandidat($id_kandidat);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/kandidatnonaktif');	
+	}
+	public function nonaktifkankandidat($id_kandidat){
+			$matikankandidat	= $this->Datakandidat_model->nonaktifkankandidat($id_kandidat);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/kandidataktif');	
+	}
+	public function aktifkanlowongan($id_lowongan){
+			$hidupkanlowongan	= $this->Datalowongan_model->aktifkanlowongan($id_lowongan);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/lowongannonaktif');	
+	}
+	public function nonaktifkanlowongan($id_lowongan){
+			$matikanlowongan	= $this->Datalowongan_model->nonaktifkanlowongan($id_lowongan);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/lowonganaktif');	
+	}
+	public function aktifkanperusahaan($id_perusahaan){
+			$hidupkanperusahaan	= $this->Dataperusahaan_model->aktifkanperusahaan($id_perusahaan);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/perusahaannonaktif');	
+	}
+	public function nonaktifkanperusahaan($id_perusahaan){
+			$matikanperusahaan	= $this->Dataperusahaan_model->nonaktifkanperusahaan($id_perusahaan);
+
+			$this->session->set_flashdata('info','true');
+			redirect('admin/perusahaanaktif');	
+	}
 }
