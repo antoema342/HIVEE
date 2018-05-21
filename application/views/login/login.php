@@ -10,18 +10,17 @@
 							
 						<!-- Tab panels -->
 						<div class="tab-content">
-						<div class="log-box">
-				<div class="row">
-				        <div class="col-md-12">
-				          <?php if ($this->session->flashdata('gagallogin')): ?>
-				            <div class="alert alert-danger alert-dismissible">
-				              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-				              <h4><i class="icon fa fa-check"></i>Info</h4>
-				              Login Gagal !! Username atau Password Salah !!
-				            </div>
-				          <?php endif ?>
-				        </div>
-				      </div>
+				  <div class="row">
+				  	<?php if ($this->session->flashdata('gagallogin')):?>
+				  		<div class="col-md-12">
+				  			<div class="alert-group">
+					  			<div class="alert alert-danger alert-dismissable">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<strong>Warning!</strong>  Username atau Password Salah !!
+								</div>
+				  			</div>
+				  		</div>
+				  	<?php endif ?>
 				  </div>
 							<!-- Employer Panel 1-->
 							<div class="tab-pane fade in show active" id="employer" role="tabpanel">

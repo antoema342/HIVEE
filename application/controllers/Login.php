@@ -36,7 +36,7 @@ class Login extends CI_Controller {
 	}
 	public function loginperusahaan()
 	{
-		$this->load->view('home/header');
+		$this->load->view('home/home_kandidat/header');
 		$this->load->view('login/login');
 		$this->load->view('home/footer');
 	}
@@ -61,7 +61,7 @@ class Login extends CI_Controller {
 		    'role' => "kandidat"
 		    );
 		    $this->session->set_userdata($data_session);
-		    redirect(base_url('Kandidat'));
+		    redirect(base_url('Kandidat/profile'));
 		}
 	  	elseif ($cekperusahaan > 0 ) 
 	  	{
