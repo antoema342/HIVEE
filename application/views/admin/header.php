@@ -41,15 +41,15 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="<?php echo base_url('assets/css/css/style.css')?>">
   <!-- endinject -->
-  <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.png')?>" />
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/hivee.png')?>" />
 </head>
 <body>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url('assets/images/logo.svg')?>" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url('assets/images/logo-mini.svg')?>" alt="logo"/></a>
+        <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url('assets/img/hivee.png')?>" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url('assets/img/hivee.png')?>" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch">
         <div class="search-field d-none d-md-block">
@@ -70,7 +70,7 @@
                 <span class="availability-status online"></span>             
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black"><?php echo $this->session->userdata('nama');?></p>
               </div>
             </a>
             <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">

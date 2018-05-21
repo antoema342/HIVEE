@@ -4,7 +4,7 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Active Job Seeker</h4>
+                  <h4 class="card-title">Non Active Job Seeker</h4>
                   <div class="box">
                   <div class="table-responsive">
             <table id="datatable" class="table">
@@ -22,7 +22,7 @@
               <tbody>
                 <?php $no=1; ?>
                 <?php 
-                          foreach ($active as $a) {
+                          foreach ($nonactive as $a) {
                           ?>
                 <tr>
                   <td>
@@ -46,7 +46,7 @@
                   <td class="text-center">
 
                     <button class="btn btn-primary" data-href="" data-toggle="modal" data-target="#confirm" > 
-                    Disable
+                    Enable
                     </button>
                     
                     <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>

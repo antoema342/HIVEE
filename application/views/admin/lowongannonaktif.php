@@ -4,49 +4,45 @@
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Active Job Seeker</h4>
+                  <h4 class="card-title">Non Active Vacancy</h4>
                   <div class="box">
                   <div class="table-responsive">
             <table id="datatable" class="table">
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Kode Kandidat</th>
                   <th>Nama</th>
-                  <th>Handphone</th>
-                  <th>Email</th>
-                  <th>Jenis Kelamin</th>
+                  <th>Kategori</th>
+                  <th>Perusahaan</th>
+                  <th>Batas Pendaftaran</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 <?php $no=1; ?>
                 <?php 
-                          foreach ($active as $a) {
+                          foreach ($nonactive as $a) {
                           ?>
                 <tr>
                   <td>
                     <?php echo ($no++); ?>
                   </td>
                   <td>
-                    <?php echo($a->id_kandidat); ?>
+                    <?php echo ($a->nama_lowongan); ?>
                   </td>
                   <td>
-                    <?php echo ($a->nama); ?>
+                    <?php echo($a->kategori); ?>
                   </td>
                   <td>
-                    <?php echo($a->telp); ?>
+                    <?php echo($a->nm_perusahaan); ?>
                   </td>
                   <td>
-                    <?php echo($a->email); ?>
-                  </td>
-                  <td>
-                    <?php echo($a->jk); ?>
+                    <?php echo($a->bataspendaftaran); ?>
                   </td>
                   <td class="text-center">
 
                     <button class="btn btn-primary" data-href="" data-toggle="modal" data-target="#confirm" > 
-                    Disable
+                    Enable
                     </button>
                     
                     <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
