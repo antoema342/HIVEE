@@ -9,25 +9,23 @@
 						<h2>Create Candidat Account</h2>
 					</div>
 					<div class="log-box">
-				<div class="row">
-				        <div class="col-md-12">
-				          <?php if ($this->session->flashdata('usersalah')): ?>
-				            <div class="alert alert-danger alert-dismissible">
-				              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-				              <h4><i class="icon fa fa-check"></i>Info</h4>
-				              Username Yang Anda Masukan Sudah Terpakai !!
-				            </div>
-				       	  <?php elseif($this->session->flashdata('emailsalah')): ?>
-				            <div class="alert alert-danger alert-dismissible">
-				              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-				              <h4><i class="icon fa fa-close"></i>Informasi</h4>
-				              Email Anda Sudah Terdaftar !!
-				           </div>  
-				          <?php endif ?>
-				        </div>
-				      </div>
-				  </div>
-					<div class="log-box">
+						<div class="row">
+						<div class="col-md-12">
+							<div class="alert-group">
+								<?php if ($this->session->flashdata('usersalah')): ?>
+									<div class="alert alert-warning alert-dismissable">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+										<strong>Warning!</strong> Username sudah terpakai.
+									</div>
+								<?php elseif ($this->session->flashdata('emailsalah')): ?>
+									<div class="alert alert-warning alert-dismissable">
+										<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+										<strong>Warning!</strong> Email sudah terpakai.
+									</div>
+								<?php endif ?>
+							</div>
+						</div>
+					</div>
 						<form class="log-form" action="<?php echo base_url('Register/DaftarKandidat');?>" method="POST">
 							<div class="row">
 								<div class="col-md-6">
@@ -67,19 +65,23 @@
 										<input type="text" class="form-control" placeholder="Username"  name="usernamekandidat">
 									</div>
 								</div>
-							</div>							
+							</div>			
+							<div class="row">
+								<div class="col-md-12">
+									<span class="text-danger"><?=form_error('passkandidat')?></span>
+									<span class="text-danger"><?=form_error('repassword')?></span>
+								</div>
+							</div>				
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Password</label>
-										<span class="text-danger"><?=form_error('passkandidat')?></span>
 										<input type="password" class="form-control" placeholder="********" name="passkandidat">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label>Confirm Password</label>
-										<span class="text-danger"><?=form_error('repassword')?></span>
 										<input type="password" class="form-control" placeholder="********" name="repassword">
 									</div>
 								</div>
