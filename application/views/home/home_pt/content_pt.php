@@ -7,7 +7,7 @@
 						<h2>Temukan Kandidat Anda.</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, qui quasi debitis. Delectus amet odit, incidunt consectetur soluta repellat! Quidem neque debitis non, delectus ducimus, accusamus. Doloremque odit, eius hic!</p>
 
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#signin" class="btn btn-hiring theme-btn btn-m mrg-5" ><span class="ti-briefcase padd-r-5"></span>Bagikan Lowongan</a>
+						<a href="<?php echo site_url('perusahaan/create') ?>" class="btn btn-hiring theme-btn btn-m mrg-5" ><span class="ti-briefcase padd-r-5"></span>Bagikan Lowongan</a>
 					</div>
 					
 					<div class="row">

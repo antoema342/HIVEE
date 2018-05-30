@@ -30,7 +30,7 @@
     <link href="<?php echo base_url('assets/plugins/bootstrap/css/bootsnav.css') ?> " rel="stylesheet">
 	
 	<!-- Nice Select Option css -->
-	<link  href="<?php echo base_url('assets/plugins/nice-select/css/nice-select.css') ?>" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo base_url('assets/plugins/nice-select/css/nice-select.css') ?>">
 	
 	<!-- Aos Css -->
     <link href="<?php echo base_url('assets/plugins/aos-master/aos.css') ?>" rel="stylesheet">
@@ -54,10 +54,10 @@
     <![endif]-->
     
 	</head>
+	
 	<body>
-		
 		<!-- ======================= Start Navigation ===================== -->
-		<nav class="navbar navbar-default navbar-mobile navbar-fixed light bootsnav">
+		<nav class="navbar navbar-default navbar-mobile navbar-fixed white no-background bootsnav">
 			<div class="container">
 			
 				<!-- Start Logo Header Navigation -->
@@ -65,7 +65,8 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 						<i class="fa fa-bars"></i>
 					</button>
-					<a class="navbar-brand" href="index.html">
+					<a class="navbar-brand" href="<?php echo site_url('perusahaan') ?>">
+						<img src="<?php echo base_url('assets/img/hivee_light.png')?>" class="logo logo-display" alt="">
 						<img src="<?php echo base_url('assets/img/hivee.png') ?>" class="logo logo-scrolled" alt="">
 					</a>
 
@@ -78,15 +79,15 @@
 					<ul class="nav navbar-nav navbar-left" data-inh="fadeInDown" data-out="fadeOutUp">
 					
 						<li class="dropdown">
-							<a href="<?php 	echo site_url('kandidat') ?>" class="">Home</a>
+							<a href="<?php 	echo site_url('perusahaan') ?>" class="">Home</a>
 						</li>
 					
 						<li class="dropdown">
-							<a href="<?php echo site_url('kandidat/search') ?>" class="">Search Job</a>
+							<a href="<?php echo site_url('perusahaan/create') ?>" class="">Create Job</a>
 						</li>
 						
 						<li class="dropdown">
-							<a href="<?php echo site_url('kandidat/history') ?>" class="">History Job</a>
+							<a href="<?php echo site_url('perusahaan') ?>" class="">Manage Job</a>
 						</li>						
 					</ul>
 					
@@ -107,4 +108,4 @@
 				<!-- /.navbar-collapse -->
 			</div>   
 		</nav>
-		<!-- ======================= End Navigation ===================== -->
+		<!-- ======================= End Navigation ===================== --> 	

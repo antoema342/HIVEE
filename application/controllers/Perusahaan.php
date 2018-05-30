@@ -18,7 +18,15 @@ class Perusahaan extends CI_Controller {
   
 	}
 	public function index(){
-		$this->load->view('perusahaan/beranda');
+		$this->load->view('perusahaan/header');
+		$this->load->view('home/home_pt/content_pt');
+		$this->load->view('home/footer');
+	}
+
+	public function create(){
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/createjob');
+		$this->load->view('home/footer');
 	}
 }
 ?>
