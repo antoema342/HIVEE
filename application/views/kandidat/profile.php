@@ -10,10 +10,16 @@
 					<button type="submit" class="btn btn-m btn-success">Download Resume</button>
 				</div>
 			</div>
-		</div>
+</div>
 
-<section>
-	<div class="container">
+	<div class="container" style = "margin-top: 1%">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="notice notice-danger">
+						<strong>Perhatian!</strong> Harap update profile anda secara berkala, hal ini akan berpengaruh pada lamaran anda.
+					</div>
+		</div>
+	</div>	
 	<div class="row">	
 	<!-- Side Bar -->
 		<div class="col-md-4 col-sm-4">
@@ -29,7 +35,7 @@
 										<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-responsive" alt="">
 									</div>
 									<div class="blog-list-info">
-										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4> Yusuf Farhan</h4></a>
+										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4><?php echo $this->session->userdata('nama') ?></h4></a>
 									</div>
 								</li>
 								<li role="persentation">	
@@ -81,7 +87,7 @@
 
 						<div class="text-center mrg-bot-30">
 							<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-circle width-100" alt="">
-							<h4 class="meg-0">Yusuf Farhan</h4>
+							<h4 class="meg-0"><?php echo $this->session->userdata('nama'); ?></h4>
 							<span>Mahasiswa</span><br>
 							<span>23 Juli 1997</span> 
 						</div>
@@ -190,16 +196,24 @@
 
 
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<div class="form-group">
-										<label for="">First Name</label>
-										<input type="text" class="form-control" placeholder="Yusuf">
+										<label for="">Nama</label>
+										<input type="text" class="form-control" placeholder="Yusuf Farhan">
 									</div>
 								</div>
-								<div class="col-md-6">
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
 									<div class="form-group">
-										<label for="">Last Name</label>
-										<input type="text" class="form-control" placeholder="Farhan">
+										<label for="">Jenis Kelamin</label>
+										<div class="radio">
+											<label for=""><input type="radio" name="gender	"> Pria</label>
+										</div>
+										<div class="radio">
+											<label for=""><input type="radio" name="gender"> Wanita</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -603,4 +617,3 @@
 			
 		</div>
 	</div>
-</section>

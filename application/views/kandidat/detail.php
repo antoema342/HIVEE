@@ -15,7 +15,7 @@
 							<img src="<?php echo base_url('assets/img/c-1.png') ?>" class="img-responsive img-circle" alt="" />
 						</div>
 						<div class="job-owner-detail">
-							<h4>IOS DEVELOPER</h4>
+							<h4>SALES FILMA</h4>
 							<span class="theme-cl">PT Apple Indonesia</span>
 						</div>
 					</div>
@@ -43,10 +43,10 @@
 								
 								<div class="row">
 									<div class="col-sm-3 mrg-bot-10">
-										<i class="ti-money padd-r-10"></i>200.000 / Day
+										<i class="ti-money padd-r-10"></i> <span class="mrg-l-5 full-type">200.000 / Day </span>
 									</div>
 									<div class="col-sm-3 mrg-bot-10">
-										<i class="ti-calendar padd-r-10"></i> <span class="mrg-l-5 full-type">21 - 28 April </span>
+										<i class="ti-calendar padd-r-10"></i>21 - 28 April
 									</div>
 									<div class="col-sm-3 mrg-bot-10">
 										<i class="fa fa-map-marker padd-r-10"></i>Mall Casablanca
@@ -66,7 +66,6 @@
 							</div>
 							<div class="detail-wrapper-body">
 								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
 							</div>
 						</div>
 						
