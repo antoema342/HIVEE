@@ -32,7 +32,7 @@
 							<ul class="side-blog-list" role="tablist">
 								<li role="persentation" class="active">
 									<div class="blog-list-img">
-										<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-responsive" alt="">
+										<img src="<?php echo base_url('assets/img/default.png') ?>" class="img-responsive" alt="">
 									</div>
 									<div class="blog-list-info">
 										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4><?php echo $this->session->userdata('nama') ?></h4></a>
@@ -86,7 +86,7 @@
 					<div class="detail-wrapper-body">
 
 						<div class="text-center mrg-bot-30">
-							<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-circle width-100" alt="">
+							<img src="<?php echo base_url('assets/img/default.png') ?>" class="img-circle width-100" alt="">
 							<h4 class="meg-0"><?php echo $this->session->userdata('nama'); ?></h4>
 							<span>Mahasiswa</span><br>
 							<span>23 Juli 1997</span> 

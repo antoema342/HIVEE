@@ -3,13 +3,12 @@
 
 		<div class="col-md-3 col-sm-3">
 			<div class="emp-pic">
-				<img src="<?php echo base_url('assets/img/ucup.png') ?>" class= "img-responsive img-circle width-220" alt="">
+				<img src="<?php echo base_url('assets/img/default.png') ?>" class= "img-responsive img-circle width-220" alt="">
 			</div>
 		</div>	
 		<div class="col-md-4 col-sm-4">
 			<div class="emp-des">
-				<h3>Yusuf Farhan</h3>
-				<span class="theme-cl">Mahasiswa</span>
+				<h3><?php echo $this->session->userdata('nama'); ?></h3>
 				<p><i class="ti-location-pin padd-r-5"></i> Jl. Joglo Raya Blok H no 5</p> 
 				<p><i class="ti-email padd-r-5"></i> yusuffarhan@gmail.com</p>
 			</div>
