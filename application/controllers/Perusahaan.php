@@ -17,15 +17,36 @@ class Perusahaan extends CI_Controller {
 		}
   
 	}
-	public function index(){
+	public function index() {
 		$this->load->view('perusahaan/header');
 		$this->load->view('home/home_pt/content_pt');
 		$this->load->view('home/footer');
 	}
 
-	public function create(){
+	public function create() {
 		$this->load->view('perusahaan/header1');
 		$this->load->view('perusahaan/createjob');
+		$this->load->view('home/footer');
+	}
+
+	public function manage() {
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/managejob');
+		$this->load->view('home/footer');
+	}
+	public function manageresume () {
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/manageresume');
+		$this->load->view('home/footer');
+	}
+	public function checkdetail () {
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/checkdetail');
+		$this->load->view('home/footer');
+	}
+	public function editcompany () {
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/editcompany');
 		$this->load->view('home/footer');
 	}
 }
