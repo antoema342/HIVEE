@@ -9,13 +9,13 @@
 	}
  	public function register_perusahaan()
 		{
-			$this->load->view('home/header');
+			$this->load->view('home/home_kandidat/header');
 			$this->load->view('home/home_pt/register');
 			$this->load->view('home/footer');
 		}
 	public function register_kandidat()
 		{
-			$this->load->view('home/header');
+			$this->load->view('home/home_kandidat/header');
 			$this->load->view('home/home_kandidat/register');
 			$this->load->view('home/footer');
 		}

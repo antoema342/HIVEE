@@ -7,21 +7,21 @@
 						<div class="text-center"><img src=" <?php echo base_url('assets/img/hivee.png') ?>" alt="" class="gambar img-responsive "></div>
 						
 						<!-- Nav tabs -->
-						
+							
 						<!-- Tab panels -->
 						<div class="tab-content">
-							<div class="row">
-								<?php if ($this->session->flashdata('gagallogin')):?>
-								<div class="col-md-12">
-									<div class="alert-group">
-										<div class="alert alert-danger alert-dismissable">
-											<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-											<strong>Warning!</strong>  Username atau Password Salah !!
-										</div>
-									</div>
+				  <div class="row">
+				  	<?php if ($this->session->flashdata('gagallogin')):?>
+				  		<div class="col-md-12">
+				  			<div class="alert-group">
+					  			<div class="alert alert-danger alert-dismissable">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+									<strong>Warning!</strong>  Username atau Password Salah !!
 								</div>
-								<?php endif ?>
-							</div>
+				  			</div>
+				  		</div>
+				  	<?php endif ?>
+				  </div>
 							<!-- Employer Panel 1-->
 							<div class="tab-pane fade in show active" id="employer" role="tabpanel">
 								<form action="<?php echo base_url('Login/ceklogin')?>" method="POST">
@@ -48,7 +48,7 @@
 									</div>
 									
 								</form>
-								<div class="log-option"><span>OR</span></div>
+								<div class="log-option"><span>OR</span></div>								
 								<div class="row mrg-bot-20">
 									<div class="col-md-6">
 										<a href="index.html#" title="" class="fb-log-btn log-btn"><i class="fa fa-facebook"></i>Sign In With Facebook</a>
@@ -70,5 +70,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
 </section>

@@ -58,8 +58,7 @@ class Login extends CI_Controller {
 		    (
 		    'nama' => $result['nama'],
 		    'status' => "login",
-		    'role' => "kandidat",
-		    'id'=>$result['id_kandidat']
+		    'role' => "kandidat"
 		    );
 		    $this->session->set_userdata($data_session);
 		    redirect(base_url('Kandidat/profile'));
