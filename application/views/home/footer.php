@@ -133,7 +133,7 @@
                 $el.val('Choice #' + index)
                    .parent().find('span.lbl').html('Choice #' + index);
             } else {
-                $el.attr('placeholder', 'Reqruitments #' + index);
+                $el.attr('placeholder', 'Reqruitments # ' + index);
             }
 
             $row.on('click', '.removeButton', function(e) {

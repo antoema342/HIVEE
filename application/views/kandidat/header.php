@@ -93,7 +93,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown sign-up">
 							<a class="dropdown-toggle btn-signup red-btn" data-toggle="dropdown" href="">
-								<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-responsive img-circle" alt=""> <?php echo strtoupper($this->session->userdata('nama')); ?>
+								<img src="<?php echo base_url('assets/img/default.png') ?>" class="img-responsive img-circle" alt=""> <?php echo strtoupper($this->session->userdata('nama')); ?>
 							</a>
 							<ul class="dropdown-menu animated fadeOutUp">
 								<li><a href="<?php echo site_url ('kandidat/profile') ?>">Edit profile</a></li>
