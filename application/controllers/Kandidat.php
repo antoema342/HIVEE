@@ -18,8 +18,10 @@ class Kandidat extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('kandidat/header');
-		$this->load->view('home/home_kandidat/content');
+		$where=$this->session->userdata('id');
+		$data=$this->Datakandidat_model->kandidatwhere($where);
+		$this->load->view('kandidat/header',$data);
+		$this->load->view('home/home_kandidat/content',$data);
 		$this->load->view('home/footer');
 	}
 
@@ -46,7 +48,9 @@ class Kandidat extends CI_Controller
 
 	public function profile()
 	{
-		$this->load->view('kandidat/header');
+		$where=$this->session->userdata('id');
+		$data['profile']=$this->Datakandidat_model->kandidatwhere('kandidat',$where);
+		$this->load->view('kandidat/header',$data);
 		$this->load->view('kandidat/profile');
 		$this->load->view('home/footer');
 	}

@@ -1,34 +1,31 @@
 <div class="page-title"  >
-			<div class="container" >
-				<div class="col-sm-7">
-					<div class="page-caption">
-						<h2>Profile Detail</h2>
-						<hr>
-					</div>
-				</div>
-				<div class="col-sm-5 text-right mrg-top-40">
-					<button type="submit" class="btn btn-m btn-success">Download Resume</button>
-				</div>
+	<div class="container" >
+		<div class="col-sm-7">
+			<div class="page-caption">
+				<h2>Profile Detail</h2>
+				<hr>
 			</div>
+		</div>
+		<div class="col-sm-5 text-right mrg-top-40">
+			<button type="submit" class="btn btn-m btn-success">Download Resume</button>
+		</div>
+	</div>
 </div>
-
-	<div class="container" style = "margin-top: 1%">
+<div class="container" style = "margin-top: 1%">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="notice notice-danger">
-						<strong>Perhatian!</strong> Harap update profile anda secara berkala, hal ini akan berpengaruh pada lamaran anda.
-					</div>
+				<strong>Perhatian!</strong> Harap update profile anda secara berkala, hal ini akan berpengaruh pada lamaran anda.
+			</div>
 		</div>
-	</div>	
-	<div class="row">	
-	<!-- Side Bar -->
+	</div>
+	<div class="row">
+		<!-- Side Bar -->
 		<div class="col-md-4 col-sm-4">
 			<div class="sidebar">
-
 				<div class="widget-boxed">
 					<div class="widget-boxed-body padd-top-5">
 						<div class="side-list">
-
 							<ul class="side-blog-list" role="tablist">
 								<li role="persentation" class="active">
 									<div class="blog-list-img">
@@ -38,13 +35,13 @@
 										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4><?php echo $this->session->userdata('nama') ?></h4></a>
 									</div>
 								</li>
-								<li role="persentation">	
+								<li role="persentation">
 									<div class="blog-list-img">
 										<h3 class="mrg-l-10"><i class="ti-user padd-r-10"></i></h3>
 									</div>
 									<div class="blog-list-info">
 										<a href="#editprofile" aria-controls="editprofile" role="tab" data-toggle ="tab"  title ="Edit Profile"><h4> Edit Profile</h4></a>
-									</div>	
+									</div>
 								</li>
 								<li>
 									<div class="blog-list-img">
@@ -74,22 +71,18 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 		<!-- End SideBar -->
 		<div class="col-md-8 col-sm-8">
-
 			<div role="tabpanel" class="tab-pane fade in active collapse" id="profile">
-
 				<div class="detail-wrapper">
 					<div class="detail-wrapper-body">
-
 						<div class="text-center mrg-bot-30">
 							<img src="<?php echo base_url('assets/img/ucup.png') ?>" class="img-circle width-100" alt="">
 							<h4 class="meg-0"><?php echo $this->session->userdata('nama'); ?></h4>
 							<span>Mahasiswa</span><br>
-							<span>23 Juli 1997</span> 
+							<span>23 Juli 1997</span>
 						</div>
 						<div class="row">
 							<div class="col-sm-4 mrg-bot-10">
@@ -102,10 +95,8 @@
 								<i class="ti-mobile padd-r-10"></i>089637632193
 							</div>
 						</div>
-
 					</div>
 				</div>
-
 				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-user padd-r-10"></i> Tentang Saya</h4>
@@ -115,13 +106,11 @@
 						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
 					</div>
 				</div>
-
-				<div class="detail-wrapper">	
+				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-medall padd-r-10"></i>Pendidikan Terakhir</h4>
 					</div>
-					<div class="detail-wrapper-body">	
-
+					<div class="detail-wrapper-body">
 						<div class="edu-history danger">
 							<i></i>
 							<div class="detail-info">
@@ -131,11 +120,9 @@
 							</div>
 						</div>
 						
-
 					</div>
 				</div>
-
-				<div class="detail-wrapper">	
+				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-briefcase padd-r-10"></i> Pengalaman Kerja</h4>
 					</div>
@@ -150,7 +137,6 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rerum perspiciatis officiis dolores similique nihil maxime eaque quas officia harum, praesentium facere dolor eligendi, amet mollitia quidem sint suscipit fugiat.</p>
 							</div>
 						</div>
-
 						<div class="edu-history danger">
 							<i></i>
 							<div class="detail-info">
@@ -160,7 +146,6 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dicta iusto necessitatibus accusamus, culpa quasi, consequuntur reprehenderit tempore commodi sed enim rem cupiditate, dolorum delectus explicabo numquam molestiae aut itaque.</p>
 							</div>
 						</div>
-
 						<div class="edu-history success">
 							<i></i>
 							<div class="detail-info">
@@ -170,11 +155,8 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione beatae assumenda, a soluta incidunt tempore, fugiat dolores, nemo fugit sint ab aperiam at amet numquam, eaque ex iste accusamus!</p>
 							</div>
 						</div>
-
 					</div>
 				</div>
-
-
 			</div>
 			
 			<div role="tabpanel" class="tab-pane fade collapse " id="editprofile">
@@ -184,7 +166,6 @@
 					</div>
 					<div class="detail-wrapper-body">
 						<form class="log-form" action="">
-
 							<div class="row">
 								<div class="col-md-12">
 									<label>Foto</label>
@@ -192,9 +173,7 @@
 										<input type="file" id="file" name="myfiles[]" multiple />
 									</div>
 								</div>
-							</div>	
-
-
+							</div>
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -203,7 +182,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -217,20 +195,19 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="form-group">
 									<div class="col-md-4">
-												<label for="">Tanggal Lahir</label>	
+										<label for="">Tanggal Lahir</label>
 										<br>
 										<select name="tgl"  id=""  class="form-control" >
-											<?php 
-												for ($i=1; $i <31 ; $i++) { 
+											<?php
+												for ($i=1; $i <31 ; $i++) {
 											?>
-												<option value="<?php $i ?>"><?php echo $i; ?></option>
+											<option value="<?php $i ?>"><?php echo $i; ?></option>
 											<?php
 												}
-											 ?>
+											?>
 										</select>
 									</div>
 									<div class="col-md-4">
@@ -251,16 +228,14 @@
 											<option value="Desember">Desember</option>
 										</select>
 									</div>
-
 									<div class="col-md-4">
 										<label for="">Tahun Lahir</label>
 										<br>
 										<input type="number" class="form-control" min="1980" max="2018" placeholder="1980">
 									</div>
-								</div>	
-									
+								</div>
+								
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -269,7 +244,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -278,7 +252,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -287,7 +260,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
@@ -296,7 +268,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group text-center mrg-top-15">
@@ -304,89 +275,75 @@
 									</div>
 								</div>
 							</div>
-
 						</form>
 					</div>
 				</div>
 			</div>
-
 			<div role ="tabpanel" class="tab-pane fade collapse" id= "pengalaman">
-
 				<div class="panel-group style-1" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default">
 						<div class="panel-heading" role="tab" id="#add">
-								<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#add" aria-expanded="false" aria-controls="add">
-								<i class="ti-briefcase padd-r-10"></i>Tambah Pengalaman</a></h4>		
+							<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#add" aria-expanded="false" aria-controls="add">
+							<i class="ti-briefcase padd-r-10"></i>Tambah Pengalaman</a></h4>
 						</div>
 						<div id="add" class="panel-collapse collapse" role="tabpanel" aria-labelledby="add">
 							
-								<div class="panel-body">
-
-									<form class="log-form" action="">
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="">Nama Perusahaan</label>
-													<input type="text" class="form-control" placeholder="ex: PT.Sinar Baru Wijaya">
-												</div>
+							<div class="panel-body">
+								<form class="log-form" action="">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Nama Perusahaan</label>
+												<input type="text" class="form-control" placeholder="ex: PT.Sinar Baru Wijaya">
 											</div>
 										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="">Divisi / Bagian</label>
-													<input type="text" class="form-control" placeholder="ex: Accounting">
-												</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Divisi / Bagian</label>
+												<input type="text" class="form-control" placeholder="ex: Accounting">
 											</div>
 										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="">Jabatan</label>
-													<input type="text" class="form-control" placeholder="ex: Kepala Bagian">
-												</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Jabatan</label>
+												<input type="text" class="form-control" placeholder="ex: Kepala Bagian">
 											</div>
 										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="">Lama Bekerja</label>
-													<input type="text" class="form-control" placeholder="ex : 1 Tahun 2 Bulan">
-												</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Lama Bekerja</label>
+												<input type="text" class="form-control" placeholder="ex : 1 Tahun 2 Bulan">
 											</div>
 										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group">
-													<label for="">Deskripsi Pekerjaan</label>
-													<textarea name="" id="" cols="30" rows="10" class="form-control" style="resize:none;">
-														
-													</textarea>
-												</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="">Deskripsi Pekerjaan</label>
+												<textarea name="" id="" cols="30" rows="10" class="form-control" style="resize:none;">
+												
+												</textarea>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="form-group text-center mrg-top-15">
-													<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
-												</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group text-center mrg-top-15">
+												<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
 											</div>
 										</div>
-
-									</form>
-
-								</div>
-
+									</div>
+								</form>
+							</div>
 						</div>
-
-					</div>	
+					</div>
 				</div>
-
 				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-briefcase padd-r-10"></i>Pengalaman</h4>
@@ -424,24 +381,19 @@
 										</td>
 									</tr>
 								</tbody>
-
 							</table>
 						</div>
-
 					</div>
 				</div>
 				
 				
-
 			</div>
 			<div role ="tabpanel" class="tab-pane fade collapse" id= "pendidikan">
-
-				<div class="detail-wrapper">	
+				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-medall padd-r-10"></i>Pendidikan Terakhir</h4>
 					</div>
-					<div class="detail-wrapper-body">	
-
+					<div class="detail-wrapper-body">
 						<div class="edu-history danger">
 							<i></i>
 							<div class="detail-info">
@@ -458,15 +410,13 @@
 						</div>
 					</div>
 				</div>
-
 				<div role ="tabpanel" class="tab-pane fade collapse" id= "editpendidikan">
 					<div class="detail-wrapper">
 						<div class="detail-wrapper-header">
-								<h4><i class="ti-medall"></i> Edit Pendidikan</h4>
-							</div>
+							<h4><i class="ti-medall"></i> Edit Pendidikan</h4>
+						</div>
 						<div class="detail-wrapper-body">
 							<form action="" class="log-form">
-
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
@@ -475,7 +425,6 @@
 										</div>
 									</div>
 								</div>
-
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
@@ -484,9 +433,7 @@
 										</div>
 									</div>
 								</div>
-
 								<div class="row">
-
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for="">Kualifikasi</label>
@@ -501,7 +448,6 @@
 											</select>
 										</div>
 									</div>
-
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for="">Bidang Studi</label>
@@ -519,7 +465,6 @@
 											</select>
 										</div>
 									</div>
-
 									<div class="col-md-4">
 										<div class="form-group">
 											<label for="">Tahun Masuk</label>
@@ -527,8 +472,7 @@
 											<input type="number" class="form-control" name="tahunmasuk" min="1980" max="2018" >
 										</div>
 									</div>
-
-								</div>	
+								</div>
 								
 								<div class="row">
 									<div class="col-md-12">
@@ -539,29 +483,23 @@
 										</div>
 									</div>
 								</div>
-
 								<div class="row">
-								<div class="col-md-12">
-									<div class="form-group text-center mrg-top-15">
-										<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
+									<div class="col-md-12">
+										<div class="form-group text-center mrg-top-15">
+											<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
+										</div>
 									</div>
 								</div>
-							</div>
-
 							</form>
 						</div>
 					</div>
-				</div>	
-
+				</div>
 			</div>
-
 			<div role ="tabpanel" class="tab-pane fade collapse" id= "resume">
-				<div class="detail-wrapper">	
-
+				<div class="detail-wrapper">
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-clip padd-r-10"></i>Upload Resume</h4>
 					</div>
-
 					<div class="detail-wrapper-body">
 						<div class="text-center">
 							<h5>Nama File : CV-Ucup.pdf </h5>
@@ -569,14 +507,13 @@
 						</div>
 						<div class="row">
 							<div class="col-md-6 text-right mrg-top-40">
-									<a href="#editpendidikan" class="btn btn-success btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Download"><i class=""></i>Download</a>
-								</div>
+								<a href="#editpendidikan" class="btn btn-success btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Download"><i class=""></i>Download</a>
+							</div>
 							<div class="col-md-6 text-center mrg-top-40">
-									<a href="javascript:void(0)"  data-toggle="modal" data-target="#editresume" class="btn btn-danger btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Edit"><i class=""></i>Edit</a>
-								</div>
+								<a href="javascript:void(0)"  data-toggle="modal" data-target="#editresume" class="btn btn-danger btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Edit"><i class=""></i>Edit</a>
+							</div>
 						</div>
 					</div>
-
 					<div class="modal fade" id="editresume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -584,36 +521,35 @@
 									<div class="text-center"><img src="<?php echo base_url('assets/img/hivee.png') ?>" alt="" class="gambar img-responsive"></div>
 									<div class="row">
 										<div class="col-md-12 col-sm-12 mrg-l-10">
-										<ul>
-											<li>Your file must be in Word (.doc or .docx), Text (.txt), Rich Text (.rtf) or PDF (.pdf) format</li>
-											<li>File size must not exceed 1MB</li>
-										</ul>
+											<ul>
+												<li>Your file must be in Word (.doc or .docx), Text (.txt), Rich Text (.rtf) or PDF (.pdf) format</li>
+												<li>File size must not exceed 1MB</li>
+											</ul>
 										</div>
 									</div>
 									<form action="" class="log-form">
-									<div class="row">
-										<div class="col-md-12 mrg-top-40">
-										<label>Resume</label>
-										<div class="custom-file-upload">
-										<input type="file" id="file" name="myfiles[]" multiple />
+										<div class="row">
+											<div class="col-md-12 mrg-top-40">
+												<label>Resume</label>
+												<div class="custom-file-upload">
+													<input type="file" id="file" name="myfiles[]" multiple />
+												</div>
+											</div>
 										</div>
-										</div>
-									</div>
-									<div class="row">
+										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group text-center mrg-top-15">
 													<button type="submit" class="btn theme-btn btn-m btn-block">SAVE CHANGES</button>
 												</div>
 											</div>
 										</div>
-									</form>	
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-
-				</div>	
-			</div>	
+				</div>
+			</div>
 			
 		</div>
 	</div>

@@ -1,4 +1,4 @@
- <div class="main-panel">
+<div class="main-panel">
   <div class="content-wrapper">
     <div class="row">
       <div class="col-md-12 grid-margin stretch-card">
@@ -20,35 +20,34 @@
                   </thead>
                   <tbody>
                     <?php $no=1; ?>
-                    <?php 
+                    <?php
                     foreach ($nonactive as $a) {
-                      ?>
-                      <tr>
-                        <td>
-                          <?php echo ($no++); ?>
-                        </td>
-                        <td>
-                          <?php echo ($a->nama_lowongan); ?>
-                        </td>
-                        <td>
-                          <?php echo($a->kategori); ?>
-                        </td>
-                        <td>
-                          <?php echo($a->nm_perusahaan); ?>
-                        </td>
-                        <td>
-                          <?php echo($a->bataspendaftaran); ?>
-                        </td>
-                        <td class="text-center">
-
-                          <a class="btn btn-primary" href="<?=site_url("admin/aktifkanlowongan/$a->id_lowongan")?>"  > 
-                            Enable
-                          </a>
-                          
-                          <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
-                        </td>
-                      </tr>
-                      <?php
+                    ?>
+                    <tr>
+                      <td>
+                        <?php echo ($no++); ?>
+                      </td>
+                      <td>
+                        <?php echo ($a->nama_lowongan); ?>
+                      </td>
+                      <td>
+                        <?php echo($a->kategori); ?>
+                      </td>
+                      <td>
+                        <?php echo($a->nm_perusahaan); ?>
+                      </td>
+                      <td>
+                        <?php echo($a->bataspendaftaran); ?>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-primary" href="<?=site_url("admin/aktifkanlowongan/$a->id_lowongan")?>"  >
+                          Enable
+                        </a>
+                        
+                        <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
+                      </td>
+                    </tr>
+                    <?php
                     }
                     ?>
                     
@@ -65,4 +64,3 @@
   <!-- partial:partials/_footer.html -->
 </div>
 </div>
-

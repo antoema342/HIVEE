@@ -15,6 +15,15 @@ class Datakandidat_model extends CI_Model {
 
 			return $query->result();
 	}
+	public function kandidatwhere($table,$id_kandidat){
+			$this->db->select('*');
+			$this->db->from($table);
+			$this->db->where('status','Aktif');
+			$this->db->where('id_kandidat',$id_kandidat);
+			$query = $this->db->get();
+
+			return $query->result();
+	}
 	public function kandidatnonaktif(){
 			$this->db->select('*');
 			$this->db->from('kandidat');
