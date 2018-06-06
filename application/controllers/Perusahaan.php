@@ -49,5 +49,10 @@ class Perusahaan extends CI_Controller {
 		$this->load->view('perusahaan/editcompany');
 		$this->load->view('home/footer');
 	}
+	public function change () {
+		$this->load->view('perusahaan/header1');
+		$this->load->view('perusahaan/changepassword');
+		$this->load->view('home/footer');
+	}
 }
 ?>

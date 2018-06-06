@@ -125,3 +125,22 @@
 		</div>
 	</div>
 </div>
+<div class="modal fade" id="terima" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="text-center"><img src="<?php echo base_url('assets/img/hivee.png') ?>" alt="" class="gambar img-responsive"></div>
+				<hr>
+				<h4> Apakah anda yakin ingin menerima lamaran ini ?</h4>
+				<div class="row">
+							<div class="col-md-6 text-right mrg-top-40">
+									<a href="" class="btn btn-success btn-block" title ="Yes"><i class="fa fa-check"></i></a>
+								</div>
+							<div class="col-md-6 text-center mrg-top-40">
+									<a href="" class="btn btn-danger btn-block" title ="No"><i class="fa fa-close"></i></a>
+								</div>
+						</div>
+			</div>
+		</div>
+	</div>
+</div>

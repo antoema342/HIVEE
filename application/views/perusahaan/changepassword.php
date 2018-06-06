@@ -4,7 +4,7 @@
 			<div class="page-caption">
 				<h2>Change Password</h2>
 				<hr>
-				<p><a href="<?php echo site_url('kandidat') ?>" title="Edit Profile">Edit Profile</a> <i class="ti-arrow-right"> </i> Change Password</p>
+				<p><a href="<?php echo site_url('perusahaan') ?>" title="Edit Profile">Edit Profile</a> <i class="ti-arrow-right"> </i> Change Password</p>
 			</div>
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-offset-3">
 						<div class="form-group">
-							<label for="">New Password</label>
+							<label for=""> New Password</label>
 							<input type="password" class="form-control" name="newpassword" placeholder="********">
 						</div>
 					</div>
