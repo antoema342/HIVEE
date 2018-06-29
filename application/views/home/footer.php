@@ -108,6 +108,9 @@
 		<script>
 			$('#dob1').dateDropper();
 		</script>
+		<script>
+			$('#dob2').dateDropper();
+		</script>
 
 		<script src="<?php echo base_url('assets/Validator/bootstrapValidator.js') ?>"></script>
 		

@@ -19,9 +19,9 @@
 		<div class="col-md-5 col-sm-5">
 			<div class="emp-detail">
 				<ul>
-					<li><span class="cl-primary">12</span> Lamaran</li>
-					<li><span class="cl-success">4</span> Diterima</li>
-					<li><span class="cl-danger">8</span> Ditolak</li>
+					<li><span class="cl-primary"><?php echo $jmllam;?></span> Lamaran</li>
+					<li><span class="cl-success"><?php echo $jmlter;?></span> Diterima</li>
+					<li><span class="cl-danger"><?php echo $jmltol;?></span> Ditolak</li>
 				</ul>
 			</div>
 		</div>
@@ -31,9 +31,9 @@
 		<div class="col-md-12 col-sm-12">
 			<div class="tab style-1" role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
-					<li role="persentation" class="active"><a href="#lamaran" aria-controls="lamaran" role="tab" data-toggle="tab" >Lamaran <span class="cl-primary">(12)</span></a></li>
-					<li role="persentation"><a href="#diterima" aria-controls="diterima" role="tab" data-toggle ="tab">Diterima <span style="color:green;">(4)</span></a> </li>
-					<li role="persentation"><a href="#ditolak" aria-controls="ditolak" role="tab" data-toggle="tab">Ditolak <span class="cl-danger">(8)</span></a></li>
+					<li role="persentation" class="active"><a href="#lamaran" aria-controls="lamaran" role="tab" data-toggle="tab" >Lamaran <span class="cl-primary">(<?php echo $jmllam;?>)</span></a></li>
+					<li role="persentation"><a href="#diterima" aria-controls="diterima" role="tab" data-toggle ="tab">Diterima <span style="color:green;">(<?php echo $jmlter;?>)</span></a> </li>
+					<li role="persentation"><a href="#ditolak" aria-controls="ditolak" role="tab" data-toggle="tab">Ditolak <span class="cl-danger">(<?php echo $jmltol;?>)</span></a></li>
 				</ul> 
 				<!-- Tab Lamaran -->
 				<div class="tab-content tabs">
@@ -48,26 +48,25 @@
 										<th>Salary</th>
 										<th>Tanggal Apply</th>
 										<th>Kategori</th>
-										<th>Aksi</th>
+										
 									</tr>
 								</thead>
 								<tbody>
+									<?php foreach ($lamaran as $k) {
+									?>
 									<tr>
 										<td>
 										<a href="">
-										<img src="<?php echo base_url('assets/img/c-3.png') ?>" class="avatar-lg" alt="Avatar">Design Logo
-										<span class="mng-jb">PT.Tana Toraja</span>
+										<img src="<?php echo base_url('assets/img/'.$k->logo) ?>" class="avatar-lg" alt="Avatar"><?php echo $k->nama_lowongan; ?>
+										<span class="mng-jb"><?php echo $k->nm_perusahaan; ?></span>
 										</a>
 										</td>
-										<td>Mall Casablanca, Kuningan</td>
-										<td>Rp.120.000/Day</td>
-										<td>27 April 2018</td>
-										<td>Design</td>
-										<td>
-										<a href="manage-job.html#" class="cl-success mrg-5" data-toggle="tooltip" data-original-title="Detail"><i class="fa fa-edit"></i></a>
-										<a href="manage-job.html#" class="cl-danger mrg-5" data-toggle="tooltip" data-original-title="Cancel"><i class="fa fa-times"></i></a>
-										</td>  
+										<td><?php echo $k->lokasi; ?></td>
+										<td><?php echo $k->gaji; ?>/Day</td>
+										<td><?php echo $k->tgl_daftar; ?></td>
+										<td><?php echo $k->kategori; ?></td>  
 									</tr>
+									<?php } ?>
 								</tbody>
 							</table>
 						</div>
@@ -88,21 +87,22 @@
 									</tr>
 								</thead>
 								<tbody>
+									<?php foreach ($lt as $o) {
+										?>
 									<tr>
 										<td>
 										<a href="">
-										<img src="<?php echo base_url('assets/img/c-1.png') ?>" class="avatar-lg" alt="Avatar">Sales Filma
-										<span class="mng-jb">PT.Apple Ind</span>
+										<img src="<?php echo base_url('assets/img/'.$o->logo) ?>" class="avatar-lg" alt="Avatar"><?php echo $o->nama_lowongan; ?>
+										<span class="mng-jb"><?php echo $o->nm_perusahaan; ?></span>
 										</a>
 										</td>
-										<td>Mall Casablanca, Kuningan</td>
-										<td>Rp.120.000/Day</td>
-										<td>27 April 2018</td>
-										<td>Retail Staff</td>
-										<td>
-										<a href="manage-job.html#" class="cl-success mrg-5" data-toggle="tooltip" data-original-title="Detail"><i class="fa fa-edit"></i></a>
-										</td>  
+										<td><?php echo $o->lokasi; ?></td>
+										<td><?php echo $o->gaji; ?>/Day</td>
+										<td><?php echo $o->tgl_daftar; ?></td>
+										<td><?php echo $o->kategori; ?></td>
+
 									</tr>
+									<?php } ?>
 								</tbody>
 							</table>
 						</div>
@@ -123,21 +123,22 @@
 									</tr>
 								</thead>
 								<tbody>
+									<?php foreach ($ltol as $p) {
+										?>
 									<tr>
 										<td>
 										<a href="">
-										<img src="<?php echo base_url('assets/img/c-2.png') ?>" class="avatar-lg" alt="Avatar">Developer Web
-										<span class="mng-jb">PT.Google</span>
+										<img src="<?php echo base_url('assets/img/'.$p->logo) ?>" class="avatar-lg" alt="Avatar"><?php echo $p->nama_lowongan; ?>
+										<span class="mng-jb"><?php echo $p->nm_perusahaan; ?></span>
 										</a>
 										</td>
-										<td>Mall Casablanca, Kuningan</td>
-										<td>Rp.120.000/Day</td>
-										<td>27 April 2018</td>
-										<td>Developer</td>
-										<td>
-										<a href="manage-job.html#" class="cl-danger mrg-5" data-toggle="tooltip" data-original-title="Detail"><i class="fa fa-trash"></i></a>
-										</td>  
+										<td><?php echo $p->lokasi; ?></td>
+										<td><?php echo $p->gaji; ?>/Day</td>
+										<td><?php echo $p->tgl_daftar; ?></td>
+										<td><?php echo $p->kategori; ?></td>
+										  
 									</tr>
+									<?php } ?>
 								</tbody>
 							</table>
 						</div>

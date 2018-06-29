@@ -1,4 +1,5 @@
-<div class="page-title"  >
+<?php foreach ($profil as $u) {
+	           } ?><div class="page-title"  >
 			<div class="container" >
 				<div class="col-sm-7">
 					<div class="page-caption">
@@ -7,7 +8,7 @@
 					</div>
 				</div>
 				<div class="col-sm-5 text-right mrg-top-40">
-					<button type="submit" class="btn btn-m btn-success">Download Resume</button>
+					<a href="<?php echo base_url('assets/img/'.$u->cv); ?>" class="btn btn-m btn-success">Download Resume</a>
 				</div>
 			</div>
 </div>
@@ -22,6 +23,7 @@
 	</div>	
 	<div class="row">	
 	<!-- Side Bar -->
+
 		<div class="col-md-4 col-sm-4">
 			<div class="sidebar">
 
@@ -32,10 +34,11 @@
 							<ul class="side-blog-list" role="tablist">
 								<li role="persentation" class="active">
 									<div class="blog-list-img">
-										<img src="<?php echo base_url('assets/img/default.png') ?>" class="img-responsive" alt="">
+
+										<img src="<?php echo base_url('assets/img/'.$u->foto) ?>" class="img-responsive" alt="">
 									</div>
 									<div class="blog-list-info">
-										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4><?php echo $this->session->userdata('nama') ?></h4></a>
+										<a href="#profile" aria-controls="profile" role="tab" data-toggle ="tab" title ="Profile"><h4><?php echo $u->nama ?></h4></a>
 									</div>
 								</li>
 								<li role="persentation">	
@@ -82,27 +85,26 @@
 
 			<div role="tabpanel" class="tab-pane fade in active collapse" id="profile">
 
+				
 				<div class="detail-wrapper">
 					<div class="detail-wrapper-body">
-
 						<div class="text-center mrg-bot-30">
-							<img src="<?php echo base_url('assets/img/default.png') ?>" class="img-circle width-100" alt="">
-							<h4 class="meg-0"><?php echo $this->session->userdata('nama'); ?></h4>
-							<span>Mahasiswa</span><br>
-							<span>23 Juli 1997</span> 
+							<img src="<?php echo base_url('assets/img/'.$u->foto) ?>" class="img-circle width-100" alt="">
+							<h4 class="meg-0"><?php echo $u->nama; ?></h4>
+							<span><?php echo($u->p_terakhir); ?></span><br>
+							<span><?php echo($u->tgl_lahir); ?></span> 
 						</div>
 						<div class="row">
 							<div class="col-sm-4 mrg-bot-10">
-								<i class="ti-location-pin padd-r-10"></i>Jl.Joglo Raya
+								<i class="ti-location-pin padd-r-10"></i><?php echo($u->alamat); ?>
 							</div>
 							<div class="col-sm-4 mrg-bot-10">
-								<i class="ti-email padd-r-10"></i>Yusuffarhan@gmail.com
+								<i class="ti-email padd-r-10"></i><?php echo($u->email); ?>
 							</div>
 							<div class="col-sm-4 mrg-bot-10">
-								<i class="ti-mobile padd-r-10"></i>089637632193
+								<i class="ti-mobile padd-r-10"></i><?php echo($u->telp); ?>
 							</div>
 						</div>
-
 					</div>
 				</div>
 
@@ -111,8 +113,7 @@
 						<h4><i class="ti-user padd-r-10"></i> Tentang Saya</h4>
 					</div>
 					<div class="detail-wrapper-body">
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+						<p><?php echo nl2br($u->deskripsi); ?></p>
 					</div>
 				</div>
 
@@ -125,9 +126,9 @@
 						<div class="edu-history danger">
 							<i></i>
 							<div class="detail-info">
-								<h3>Universitas Mercu Buana</h3>
-								<i>2015 - 2019</i>
-								<span>Fakultas Ilmu Komputer , <i>Sistem Informasi</i></span>
+								<h3><?php echo($u->nm_instansi); ?></h3>
+								<i><?php echo($u->tahun_masuk); ?> - <?php echo($u->tahun_lulus); ?></i>
+								<span><i><?php echo($u->jurusan); ?></i></span>
 							</div>
 						</div>
 						
@@ -135,42 +136,27 @@
 					</div>
 				</div>
 
+
 				<div class="detail-wrapper">	
 					<div class="detail-wrapper-header">
 						<h4><i class="ti-briefcase padd-r-10"></i> Pengalaman Kerja</h4>
 					</div>
 					<div class="detail-wrapper-body">
-						
+						<?php foreach ($pengalaman as $k) {
+							# code...
+						?>
 						<div class="edu-history info">
 							<i></i>
 							<div class="detail-info">
-								<h3>SPB Sabun</h3>
-								<i>23 Mei - 28 Mei 2018</i>
-								<span>PT. Sabun Indonesia</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rerum perspiciatis officiis dolores similique nihil maxime eaque quas officia harum, praesentium facere dolor eligendi, amet mollitia quidem sint suscipit fugiat.</p>
+								<h3><?php echo $k->posisi.", ".$k->jabatan;?></h3>
+								<i><?php echo $k->lamakerja." tahun";?></i>
+								<span><?php echo $k->nm_perusahaan;?></span>
+								<p><?php echo nl2br($k->desc);?></p>
 							</div>
 						</div>
+						<?php } ?>
 
-						<div class="edu-history danger">
-							<i></i>
-							<div class="detail-info">
-								<h3>Voulunter DWP</h3>
-								<i>Juli 2017</i>
-								<span>PT.Ismaya Live</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dicta iusto necessitatibus accusamus, culpa quasi, consequuntur reprehenderit tempore commodi sed enim rem cupiditate, dolorum delectus explicabo numquam molestiae aut itaque.</p>
-							</div>
-						</div>
-
-						<div class="edu-history success">
-							<i></i>
-							<div class="detail-info">
-								<h3>Sales Bolt</h3>
-								<i>Agustus 2017</i>
-								<span>PT. Bolt Indonesia</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione beatae assumenda, a soluta incidunt tempore, fugiat dolores, nemo fugit sint ab aperiam at amet numquam, eaque ex iste accusamus!</p>
-							</div>
-						</div>
-
+						
 					</div>
 				</div>
 
@@ -183,13 +169,15 @@
 						<h4><i class="ti-user padd-r-10"></i>Edit Profile</h4>
 					</div>
 					<div class="detail-wrapper-body">
-						<form class="log-form" action="">
+						<?php
+        echo form_open_multipart('kandidat/editprofil');
+        ?>
 
 							<div class="row">
 								<div class="col-md-12">
 									<label>Foto</label>
-									<div class="custom-file-upload">
-										<input type="file" id="file" name="myfiles[]" multiple />
+									<div class="">
+										<input type="file" id="file" name="myfiles"  />
 									</div>
 								</div>
 							</div>	
@@ -199,7 +187,7 @@
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="">Nama</label>
-										<input type="text" class="form-control" placeholder="Yusuf Farhan">
+										<input type="text" name="nama" class="form-control" value="<?php echo $u->nama;?>">
 									</div>
 								</div>
 							</div>
@@ -209,55 +197,20 @@
 									<div class="form-group">
 										<label for="">Jenis Kelamin</label>
 										<div class="radio">
-											<label for=""><input type="radio" name="gender	"> Pria</label>
+											<label for=""><input type="radio" name="gender" <?php if($u->jk=='Pria') {echo  'Checked';}?>> Pria</label>
 										</div>
 										<div class="radio">
-											<label for=""><input type="radio" name="gender"> Wanita</label>
+											<label for=""><input type="radio" name="gender" <?php if($u->jk=='Wanita') {echo  'Checked';}?>> Wanita</label>
 										</div>
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
-								<div class="form-group">
-									<div class="col-md-4">
-												<label for="">Tanggal Lahir</label>	
-										<br>
-										<select name="tgl"  id=""  class="form-control" >
-											<?php 
-												for ($i=1; $i <31 ; $i++) { 
-											?>
-												<option value="<?php $i ?>"><?php echo $i; ?></option>
-											<?php
-												}
-											 ?>
-										</select>
-									</div>
-									<div class="col-md-4">
-										<label for="">Bulan Lahir</label>
-										<br>
-										<select name="" id="bulan" class="form-control" >
-											<option value="Januari">Januari</option>
-											<option value="Februari">Februari</option>
-											<option value="Maret">Maret</option>
-											<option value="April">April</option>
-											<option value="Mei">Mei</option>
-											<option value="Juni">Juni</option>
-											<option value="Juli">Juli</option>
-											<option value="Agustus">Agustus</option>
-											<option value="September">September</option>
-											<option value="Oktober">Oktober</option>
-											<option value="November">November</option>
-											<option value="Desember">Desember</option>
-										</select>
-									</div>
-
-									<div class="col-md-4">
-										<label for="">Tahun Lahir</label>
-										<br>
-										<input type="number" class="form-control" min="1980" max="2018" placeholder="1980">
-									</div>
-								</div>	
+								<div class="col-md-6">
+							<label for="">Start Date</label>
+							 <input type="text" name="tgl_lahir" id="dob2" data-lang="en" data-large-mode="true" data-min-year="2017" data-max-year="2020" data-disabled-days="08/17/2017,08/18/2017" data-id="datedropper-0" data-theme="my-style" class="form-control " readonly="">
+						</div>
 									
 							</div>
 
@@ -265,7 +218,7 @@
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="">Email</label>
-										<input type="email" class="form-control" placeholder="yusuffarhan@gmail.com">
+										<input type="email" name="email" class="form-control" value="<?php echo $u->email; ?>">
 									</div>
 								</div>
 							</div>
@@ -274,7 +227,7 @@
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for=""> No Telepon</label>
-										<input type="number" class="form-control" min="0" max="9" placeholder="089637632173">
+										<input type="number" name="telp" class="form-control" value="<?php echo $u->telp; ?>">
 									</div>
 								</div>
 							</div>
@@ -283,7 +236,7 @@
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="">Alamat</label>
-										<textarea name="" id="" class="form-control" cols="30" rows="10" style="resize:none;"></textarea>
+										<textarea name="alamat" id="" class="form-control" cols="30" rows="10" style="resize:none;"><?php echo $u->alamat;?></textarea>
 									</div>
 								</div>
 							</div>
@@ -292,7 +245,7 @@
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="">Tentang Saya</label>
-										<textarea name="" id="" class="form-control" cols="30" rows="10" style="resize:none;"></textarea>
+										<textarea name="des" id="des" class="form-control" cols="30" rows="10" style="resize:none;"><?php echo nl2br($u->deskripsi); ?></textarea>
 									</div>
 								</div>
 							</div>
@@ -305,7 +258,7 @@
 								</div>
 							</div>
 
-						</form>
+						<?php echo form_close(); ?>
 					</div>
 				</div>
 			</div>
@@ -322,13 +275,13 @@
 							
 								<div class="panel-body">
 
-									<form class="log-form" action="">
+									<form class="log-form" action="<?php echo base_url('Kandidat/ubahpengalaman')?>" method="POST">
 
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="">Nama Perusahaan</label>
-													<input type="text" class="form-control" placeholder="ex: PT.Sinar Baru Wijaya">
+													<input type="text" name="nama" class="form-control" placeholder="ex: PT.Sinar Baru Wijaya">
 												</div>
 											</div>
 										</div>
@@ -337,7 +290,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="">Divisi / Bagian</label>
-													<input type="text" class="form-control" placeholder="ex: Accounting">
+													<input type="text" name="posisi" class="form-control" placeholder="ex: Accounting">
 												</div>
 											</div>
 										</div>
@@ -346,7 +299,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="">Jabatan</label>
-													<input type="text" class="form-control" placeholder="ex: Kepala Bagian">
+													<input type="text" name="jabatan" class="form-control" placeholder="ex: Kepala Bagian">
 												</div>
 											</div>
 										</div>
@@ -355,7 +308,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="">Lama Bekerja</label>
-													<input type="text" class="form-control" placeholder="ex : 1 Tahun 2 Bulan">
+													<input type="text" class="form-control" name="lama" placeholder="ex : 1 Tahun 2 Bulan">
 												</div>
 											</div>
 										</div>
@@ -364,7 +317,7 @@
 											<div class="col-md-12">
 												<div class="form-group">
 													<label for="">Deskripsi Pekerjaan</label>
-													<textarea name="" id="" cols="30" rows="10" class="form-control" style="resize:none;">
+													<textarea name="des" id="" cols="30" rows="10" class="form-control" style="resize:none;">
 														
 													</textarea>
 												</div>
@@ -405,15 +358,18 @@
 									</tr>
 								</thead>
 								<tbody>
+									<?php foreach ($pengalaman as $c) {
+									?>
 									<tr>
-										<td>PT.Makanan</td>
-										<td>Marketing</td>
-										<td>Sales</td>
-										<td>1 Tahun 8 Bulan</td>
+										<td><?php echo $c->nm_perusahaan; ?></td>
+										<td><?php echo $c->posisi; ?></td>
+										<td><?php echo $c->jabatan; ?></td>
+										<td><?php echo $c->lamakerja; ?></td>
 										<td>
-											<a href="" class="cl-danger mrg-5" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash"></i></a>
+											<a href="<?php echo base_url('Kandidat/Hapuspengalaman/'.$c->id_pengalaman)?>" class="cl-danger mrg-5" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash"></i></a>
 										</td>
 									</tr>
+									<?php } ?>
 									<tr>
 										<td>PT. Bolt</td>
 										<td>Accounting</td>
@@ -445,10 +401,10 @@
 						<div class="edu-history danger">
 							<i></i>
 							<div class="detail-info">
-								<h3>Universitas Mercu Buana</h3>
-								<i>2015 - 2019</i>
-								<i>S1</i>
-								<span>Fakultas Ilmu Komputer , <i>Sistem Informasi</i></span>
+								<h3><?php echo $u->nm_instansi;?></h3>
+								<i><?php echo $u->tahun_masuk." - ".$u->tahun_lulus;?></i>
+								<i><?php echo $u->p_terakhir; ?></i>
+								<span><i><?php echo $u->jurusan; ?></i></span>
 							</div>
 							<div class="row">
 								<div class="col-md-12 text-right mrg-top-40">
@@ -465,13 +421,13 @@
 								<h4><i class="ti-medall"></i> Edit Pendidikan</h4>
 							</div>
 						<div class="detail-wrapper-body">
-							<form action="" class="log-form">
+							<form action="<?php echo base_url('Kandidat/pendidikan')?>" method="POST" class="log-form">
 
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
 											<label for="">Nama Institusi</label>
-											<input type="text" class="form-control" name="" placeholder="Universitas Mercu Buana">
+											<input type="text" class="form-control" name="nama" value="<?php echo $u->nm_instansi;?>">
 										</div>
 									</div>
 								</div>
@@ -480,7 +436,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label for="">Tahun Lulus</label>
-											<input type="number" class="form-control" min="1990" max ="2020">
+											<input type="number" name="tl"class="form-control" min="1990" max ="2020" value="<?php echo $u->tahun_lulus; ?>">
 										</div>
 									</div>
 								</div>
@@ -524,7 +480,7 @@
 										<div class="form-group">
 											<label for="">Tahun Masuk</label>
 											<br>
-											<input type="number" class="form-control" name="tahunmasuk" min="1980" max="2018" >
+											<input type="number" name="tm" class="form-control" name="tahunmasuk" min="1980" max="2018" value=<?php echo $u->tahun_masuk; ?> >
 										</div>
 									</div>
 
@@ -535,7 +491,7 @@
 										<div class="form-group">
 											<label for="">Informasi Tambahan</label>
 											<br>
-											<textarea name="tambahan" id="" cols="30" rows="10" class="form-control" style="resize:none;"></textarea>
+											<textarea name="tambahan" id="" cols="30" rows="10" class="form-control" style="resize:none;"><?php echo $u->tambahan; ?></textarea>
 										</div>
 									</div>
 								</div>
@@ -564,12 +520,12 @@
 
 					<div class="detail-wrapper-body">
 						<div class="text-center">
-							<h5>Nama File : CV-Ucup.pdf </h5>
-							<h5>Tanggal Diperbarui	: 8 April 2017 12:11</h5>
+							<h5>Nama File :<?php echo $u->cv; ?> </h5>
+							<hr></hr>
 						</div>
 						<div class="row">
 							<div class="col-md-6 text-right mrg-top-40">
-									<a href="#editpendidikan" class="btn btn-success btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Download"><i class=""></i>Download</a>
+									<a href="<?php echo base_url('assets/img/'.$u->cv)?>" class="btn btn-success btn-block"  title ="Download"><i class=""></i>Download</a>
 								</div>
 							<div class="col-md-6 text-center mrg-top-40">
 									<a href="javascript:void(0)"  data-toggle="modal" data-target="#editresume" class="btn btn-danger btn-block" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Edit"><i class=""></i>Edit</a>
@@ -590,12 +546,12 @@
 										</ul>
 										</div>
 									</div>
-									<form action="" class="log-form">
+									<?php echo form_open_multipart('Kandidat/Uploadcv') ?>
 									<div class="row">
 										<div class="col-md-12 mrg-top-40">
 										<label>Resume</label>
 										<div class="custom-file-upload">
-										<input type="file" id="file" name="myfiles[]" multiple />
+										<input type="file" id="file" name="myfiles"  />
 										</div>
 										</div>
 									</div>
@@ -606,7 +562,7 @@
 												</div>
 											</div>
 										</div>
-									</form>	
+									<?php echo form_close();?>
 								</div>
 							</div>
 						</div>

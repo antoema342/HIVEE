@@ -8,8 +8,13 @@
 	{
 		public function index ()
 		{
-			$this->load->view('home/header');
-			$this->load->view('home/home_pt/content_pt');
+			$id_perusahaan=$this->session->userdata('id_perusahaan');
+		$data['perusahaan']=$this->Dataperusahaan_model->profilperusahaan($id_perusahaan);
+		$data['jmlkandidat']=$this->Datakandidat_model->Jumlahkandidat();
+		$data['jmlperusahaan']=$this->Dataperusahaan_model->Jumlahperusahaan();
+		$data['jmllowongan']=$this->Datalowongan_model->Jumlahlowongan();
+		$this->load->view('home/header');
+		$this->load->view('home/home_pt/content_pt',$data);
 			$this->load->view('home/footer');
 		}
 

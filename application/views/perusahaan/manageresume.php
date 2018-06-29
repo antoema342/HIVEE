@@ -1,19 +1,24 @@
+<?php foreach ($perusahaan as $k) {
+		} ?>
 <section>
 	<div class="container">
 		<div class="col-md-3 col-sm-3 text-center">
 			<div class="emp-pic">
-				<img src="<?php echo base_url('assets/img/company.png') ?>" class= "img-responsive img-circle width-220" alt="">
+				<img src="<?php echo base_url('assets/img/'.$k->logo) ?>" class= "img-responsive img-circle width-220" alt="">
 			</div>
 		</div>
+		<?php foreach ($perusahaan as $k) {
+		?>
 		<div class="col-md-6 col-sm-6">
 			<div class="emp-des">
 				<br>
-				<h3>IOS DEVELOPER</h3>
+				<h3><?php echo $k->nama_lowongan; ?></h3>
 				<p>2 Juni 2018 - 18 Juni 2018</p> 
-				<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-				<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
+				<p class="text-muted"><span class="ti-location-pin"></span> <?php echo $k->alamat_perusahaan; ?></p>
+				<p class="text-muted" style="color:green"><span class="ti-money"></span> <?php echo $k->gaji; ?></p>
 			</div>
 		</div>
+		<?php } ?>
 	</div>
 </section>
 <div class="container">
@@ -30,56 +35,26 @@
 			</thead>
 
 			<tbody>
-
+				<?php foreach ($lowongan as $y) {
+				?>
 				<tr>
 					<td>
 						<a href="job-detail.html">
-							<img src="<?php echo base_url('assets/img/ucup.png') ?> " class="avatar avatar-lg" alt="Avatar">Yusuf Farhan
-							<span class="mng-jb">Mahasiswa</span>
+							<img src="<?php echo base_url('assets/img/'.$y->foto) ?> " class="avatar avatar-lg" alt="Avatar"><?php echo $y->nama; ?>
+							<span class="mng-jb"><?php echo $y->p_terakhir; ?></span>
 						</a>
 					</td>
-					<td>089637632173</td>
-					<td>yusuffarhan@gmail.com</td>                
-					<td><i class="ti-credit-card"></i> 10 Jan 2017</td>
+					<td><?php echo $y->telp; ?></td>
+					<td><?php echo $y->email; ?></td>                
+					<td><i class="ti-credit-card"></i> <?php echo $y->tgl_daftar; ?></td>
 					<td>
-						<a href="<?php echo site_url('perusahaan/checkdetail') ?>" class="cl-info mrg-5" title ="Check Detail"><i class="fa fa-edit"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#terima" class="cl-success mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Terima" ><i class="fa fa-check"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#delete" class="cl-danger mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Delete"><i class="fa fa-close"></i></a>
+						<a href="<?php echo site_url('perusahaan/checkdetail/'.$y->id_kandidat) ?>" class="cl-info mrg-5" title ="Check Detail"><i class="fa fa-edit"></i></a>
+						<a href="<?php echo site_url('perusahaan/ubahlamaran/'.$y->id_kandidat.'/'.$k->id_lowongan) ?>"  class="cl-success mrg-5"  title ="Terima" ><i class="fa fa-check"></i></a>
+						<a href="<?php echo site_url('perusahaan/tolaklamaran/'.$y->id_kandidat.'/'.$k->id_lowongan) ?>" class="cl-danger mrg-5"  title ="Delete"><i class="fa fa-close"></i></a>
 					</td>  
 				</tr>
-
-				<tr>
-					<td>
-						<a href="job-detail.html">
-							<img src="<?php echo site_url ('assets/img/default.png') ?>" class="avatar avatar-lg" alt="Avatar">Tegar Ferdyla M
- 							<span class="mng-jb">Mahasiswa</span>
-						</a>
-					</td>
-					<td>089637632173</td>
-					<td>tegarferdyla@gmail.com</td>                
-					<td><i class="ti-credit-card"></i> 10 Jan 2017</td>
-					<td>
-						<a href="<?php echo site_url ('perusahaan/checkdetail') ?>" class="cl-info mrg-5" title ="Check Detail"><i class="fa fa-edit"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#terima" class="cl-success mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Terima" ><i class="fa fa-check"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#delete" class="cl-danger mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Delete"><i class="fa fa-close"></i></a>
-					</td>  
-				</tr>
-				<tr>
-					<td>
-						<a href="job-detail.html">
-							<img src="<?php echo base_url('assets/img/client-4.jpg') ?>" class="avatar avatar-lg" alt="Avatar">Nancy T. Clayton
-							<span class="mng-jb">Wiraswasta</span>
-						</a>
-					</td>
-					<td>089637632173</td>
-					<td>nancy@gmail.com</td>                
-					<td><i class="ti-credit-card"></i> 10 Jan 2017</td>
-					<td>
-						<a href="<?php echo site_url('perusahaan/checkdetail') ?>" class="cl-info mrg-5" title ="Check Detail"><i class="fa fa-edit"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#terima" class="cl-success mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Terima" ><i class="fa fa-check"></i></a>
-						<a href="javascript:void(0)"  data-toggle="modal" data-target="#delete" class="cl-danger mrg-5" aria-controls="pendidikans" role="tab" data-toggle ="tab" title ="Delete"><i class="fa fa-close"></i></a>
-					</td>  
-				</tr>
+<?php } ?>
+				
 
 			</tbody>
 		</table>

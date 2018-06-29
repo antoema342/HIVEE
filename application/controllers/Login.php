@@ -56,6 +56,7 @@ class Login extends CI_Controller {
 	  		$result=$this->db->get_where('kandidat',$where)->row_array();
 		    $data_session = array
 		    (
+		    	'id_kandidat'=>$result['id_kandidat'],
 		    'nama' => $result['nama'],
 		    'status' => "login",
 		    'role' => "kandidat"
@@ -68,6 +69,7 @@ class Login extends CI_Controller {
 	  	$result=$this->db->get_where('perusahaan',$where)->row_array();
 	    $data_session = array
 	    (
+	    'id_perusahaan'=>$result['id_perusahaan'],
 	    'nama' => $result['nm_perusahaan'],
 	    'status' => "login",
 	    'role' => "perusahaan"

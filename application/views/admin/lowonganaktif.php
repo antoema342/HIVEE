@@ -45,7 +45,7 @@
                     Disable
                     </a>
                     
-                    <a href="<?php echo site_url("admin/nonaktifkanlowongan/$a->id_lowongan") ?>" class="btn btn-danger">Delete</a>
+                    <!--<a href="<?php echo site_url("admin/nonaktifkanlowongan/$a->id_lowongan") ?>" class="btn btn-danger">Delete</a>-->
                   </td>
                 </tr>
                 <?php

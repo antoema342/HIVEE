@@ -45,7 +45,7 @@
                     Disable
                     </button>
                     
-                    <a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>
+                    <!--<a href="<?php //echo site_url(" admin/tolakemailkp/$u->id_surat") ?>" class="btn btn-danger">Delete</a>-->
                   </td>
                 </tr>
                 <?php

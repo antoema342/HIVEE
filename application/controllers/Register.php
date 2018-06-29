@@ -73,6 +73,7 @@
 
 		$result=$this->db->get_where('kandidat',$where)->row_array();
 		$data_session = array(
+			'id_kandidat'=>$result['id_kandidat'],
 						    'nama' => $result['nama'],
 						    'status' => "login"
 						    );
@@ -92,7 +93,7 @@
 		$this->form_validation->set_rules('tlppt', 'Number Telephone', 'trim|required|min_length[12]');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('home/header1');
+			$this->load->view('home/header');
 			$this->load->view('home/home_pt/register');
 			$this->load->view('home/footer');
 		}
@@ -111,7 +112,8 @@
 		'email' 	 	 	 => $emailkan ,
 		'telp' 	 		 	 => $this->input->post('tlppt'),
 		'username' 	 		 => $user,
-		'password'		 	 => md5($pass)
+		'password'		 	 => md5($pass),
+		'logo'=>"default.png"
 		);
 		$resultcheckemail   = $this->Daftaruser_model->cekemailkandidat($emailkan);
 		$resultcheckemailpt = $this->Daftaruser_model->cekemailpt($emailkan);
@@ -135,6 +137,7 @@
 
 		$result=$this->db->get_where('perusahaan',$where)->row_array();
 		$data_session = array(
+			'id_perusahaan'=>$result['id_perusahaan'],
 						    'nama' => $result['nm_perusahaan'],
 						    'status' => "login",
 						    'role' => "perusahaan"

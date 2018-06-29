@@ -19,7 +19,7 @@
 									<i class="fa fa-check"></i>
 								</div>
 								<div class="cmp-detail">							
-									<h3>674.058</h3>
+									<h3><?php echo $jmlkandidat; ?></h3>
 									<span>Pekerja Aktif</span>
 								</div>
 							</div>
@@ -32,7 +32,7 @@
 									<i class="fa fa-check"></i>
 								</div>
 								<div class="cmp-detail">							
-									<h3>74.587</h3>
+									<h3><?php echo $jmlperusahaan; ?></h3>
 									<span>Perusahaan</span>
 								</div>
 							</div>
@@ -45,8 +45,8 @@
 									<i class="fa fa-check"></i>
 								</div>
 								<div class="cmp-detail">							
-									<h3>47</h3>
-									<span>Negara</span>
+									<h3><?php echo $jmllowongan; ?></h3>
+									<span>Lowongan</span>
 								</div>
 							</div>
 						</div>

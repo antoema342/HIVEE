@@ -85,165 +85,29 @@
 
 					<div class="row " id="page_2">
 						<!-- Single Job -->
+						<?php foreach ($lowongan as $l ) {
+						?>
 							<div class="col-md-3 col-sm-6">
 								<div class="grid-job-widget">									
 									<div class="u-content">
 										<div class="avatar box-80">
 											<a href="#">
-												<img class="img-responsive" src="<?php echo base_url('assets/img/c-3.png') ?>" alt="">
+												<img class="img-responsive" src="<?php echo base_url('assets/img/'.$l->logo) ?>" alt="">
 											</a>
 										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
+										<h5><a href="#"><?php echo $l->nama_lowongan; ?></a></h5>
+										<p class=""><?php echo $l->nm_perusahaan; ?></p>
+										<p class="text-muted"><span class="ti-location-pin"></span><?php echo $l->lokasi; ?></p>
+										<p class="text-muted" style="color:green"><span class="ti-money"></span> <?php echo $l->gaji; ?></p>
 									</div>
 									
 									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
+										<a href="<?php echo site_url('kandidat/detail/'.$l->id_lowongan) ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
 									</div>									
 								</div>
 							</div>
+							<?php } ?>
 							<!-- Single Job 2 -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job 3-->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="<?php echo base_url('assets/img/c-2.png') ?>" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="<?php echo site_url('kandidat/detail') ?>" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
-							<!-- Single Job -->
-							<div class="col-md-3 col-sm-6">
-								<div class="grid-job-widget">									
-									<div class="u-content">
-										<div class="avatar box-80">
-											<a href="#">
-												<img class="img-responsive" src="http://localhost/hivee/assets/img/c-1.png" alt="">
-											</a>
-										</div>
-										<h5><a href="#">IOS DEVELOPER</a></h5>
-										<p class="">PT. Apple Indonesia</p>
-										<p class="text-muted"><span class="ti-location-pin"></span> Jakarta Pusat, DKI Jakarta</p>
-										<p class="text-muted" style="color:green"><span class="ti-money"></span> 2.500.000 - 3.000.000</p>
-									</div>
-									
-									<div class="job-type-grid">
-										<a href="job-detail.html" class="btn light-btn btn-radius btn-m">Detail <span class="ti-angle-right"></span></a>
-									</div>									
-								</div>
-							</div>
 							<div class="flexbox padd-10">
 						<ul class="pagination">
 							<li class="page-item">

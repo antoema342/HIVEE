@@ -16,9 +16,12 @@ class Admin extends CI_Controller {
 		}
 	}
 	public function index(){
+		$data['jmlkan']=$this->Datakandidat_model->Jumlahkandidat();
+		$data['perusahaan']=$this->Dataperusahaan_model->Jumlahperusahaan();
+		$data['lowongan']=$this->Datalowongan_model->Jumlahlowongan();
 		$this->load->view('admin/header');
 		$this->load->view('admin/sidebar');
-		$this->load->view('admin/dashboard');
+		$this->load->view('admin/dashboard',$data);
 		$this->load->view('admin/footer');
 	}
 	public function kandidataktif(){
@@ -98,5 +101,59 @@ class Admin extends CI_Controller {
 
 			$this->session->set_flashdata('info','true');
 			redirect('admin/perusahaanaktif');	
+	}
+	public function lamaran()
+	{
+		$data['waiting']=$this->Dataperusahaan_model->lamaranadmin();
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/lamaranwaiting',$data);
+		$this->load->view('admin/footer');
+
+	}
+	public function lamaranterima()
+	{
+		$data['waiting']=$this->Dataperusahaan_model->lamaranterima();
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/lamaranterima',$data);
+		$this->load->view('admin/footer');
+
+	}
+	public function lamarantolak()
+	{
+		$data['waiting']=$this->Dataperusahaan_model->lamarantolak();
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/lamarantolak',$data);
+		$this->load->view('admin/footer');
+
+	}
+	public function report()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/sidebar');
+		$this->load->view('admin/tombol');
+		$this->load->view('admin/footer');
+	}
+	public function reportKandidat()
+	{
+		$data['kandidataktif']=$this->Datakandidat_model->Jumlahkandidat();
+		$data['kandidatnonaktif']=$this->Datakandidat_model->Jumlahnonaktif();
+		$data['kana']=$this->Datakandidat_model->kandidataktif();
+		$data['kanon']=$this->Datakandidat_model->kandidatnonaktif();
+		$this->load->view('admin/headerChart');
+		$this->load->view('admin/chartjs',$data);
+		
+	}
+	public function reportPerusahaan()
+	{
+		$data['perusahaanaktif']=$this->Dataperusahaan_model->Jumlahperusahaan();
+		$data['perusahaannonaktif']=$this->Dataperusahaan_model->Jumlahperusahaannonaktif();
+		$data['kana']=$this->Dataperusahaan_model->perusahaanaktif();
+		$data['kanon']=$this->Dataperusahaan_model->perusahaannonaktif();
+		$this->load->view('admin/headerChartPerusahaan');
+		$this->load->view('admin/chart',$data);
+		
 	}
 }

@@ -96,11 +96,12 @@
 							<a href="<?php echo site_url('perusahaan/manage') ?>" class="">Manage Job</a>
 						</li>							
 					</ul>
-					
+					<?php foreach ($perusahaan as $p) {
+					?>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown sign-up">
 							<a class="dropdown-toggle btn-signup red-btn" data-toggle="dropdown" href="">
-								<img src="<?php echo base_url('assets/img/company.png') ?>" class="img-responsive img-circle" alt=""> <?php echo strtoupper($this->session->userdata('nama')); ?>
+								<img src="<?php echo base_url('assets/img/'.$p->logo) ?>" class="img-responsive img-circle" alt=""> <?php echo strtoupper($p->nm_perusahaan); ?>
 							</a>
 							<ul class="dropdown-menu animated fadeOutUp">
 								<li><a href="<?php echo site_url ('perusahaan/editcompany') ?>">Edit profile</a></li>
@@ -109,7 +110,7 @@
 						</li> 
 						<li class="br-right"><a href="<?php echo base_url('login?logout=signout');?>"><i class="login-icon ti-power-off"></i>Logout</a></li>
 					</ul>
-						
+					<?php } ?>	
 				</div>
 				<!-- /.navbar-collapse -->
 			</div>   

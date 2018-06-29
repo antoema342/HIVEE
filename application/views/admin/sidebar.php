@@ -68,13 +68,14 @@
             </a>
             <div class="collapse" id="job">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('Admin/kandidataktif')?>">Active Job App</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Non Active Job App</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('Admin/lamaran')?>">Applicant</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('Admin/lamaranterima')?>">Accepted Applicant</a></li>
+                <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('Admin/lamarantolak')?>">Cancel Applicant</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="<?php echo site_url('Admin/report')?>">
               <span class="menu-title">Report</span>
               <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
